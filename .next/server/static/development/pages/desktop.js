@@ -93,6 +93,17 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "../OLEx/dist/index.js":
+/*!*****************************!*\
+  !*** ../OLEx/dist/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+!function(t){var r={};function n(e){if(r[e])return r[e].exports;var o=r[e]={i:e,l:!1,exports:{}};return t[e].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=r,n.d=function(t,r,e){n.o(t,r)||Object.defineProperty(t,r,{enumerable:!0,get:e})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,r){if(1&r&&(t=n(t)),8&r)return t;if(4&r&&"object"==typeof t&&t&&t.__esModule)return t;var e=Object.create(null);if(n.r(e),Object.defineProperty(e,"default",{enumerable:!0,value:t}),2&r&&"string"!=typeof t)for(var o in t)n.d(e,o,function(r){return t[r]}.bind(null,o));return e},n.n=function(t){var r=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(r,"a",r),r},n.o=function(t,r){return Object.prototype.hasOwnProperty.call(t,r)},n.p="",n(n.s=0)}([function(t,r,n){"use strict";n.r(r),function(t){n.d(r,"chrome",(function(){return o})),n.d(r,"chromeSwitch",(function(){return u}));var e=function(){for(var t=0,r=0,n=arguments.length;r<n;r++)t+=arguments[r].length;var e=Array(t),o=0;for(r=0;r<n;r++)for(var u=arguments[r],i=0,c=u.length;i<c;i++,o++)e[o]=u[i];return e},o=t.chrome;function u(t,r){return function(){for(var n,u=[],i=0;i<arguments.length;i++)u[i]=arguments[i];return(n=Function.prototype.call).call.apply(n,e([o?r:t,this],u))}}}.call(this,n(1))},function(t,r){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(t){"object"==typeof window&&(n=window)}t.exports=n}]);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
@@ -2042,8 +2053,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_Window_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/Window.js */ "./src/Window.js");
 /* harmony import */ var _src_Iframe_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/Iframe.js */ "./src/Iframe.js");
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index.js */ "./pages/index.js");
+/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../OLEx/dist/index.js */ "../OLEx/dist/index.js");
+/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! node-polyglot */ "node-polyglot");
+/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(node_polyglot__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "D:\\Graham\\ObjectLand\\main\\OLWebFull\\pages\\desktop\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -2053,63 +2070,99 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   constructor(props = {}) {
     super(props);
     this.onSnapMessage = this.onSnapMessage.bind(this);
+
+    try {
+      this.renderExWinPossibly = Object(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__["chromeSwitch"])(() => __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }), this.renderExWin.bind(this));
+    } catch (err) {
+      this.renderExWinPossibly = () => __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      });
+    }
+
+    ;
+  }
+
+  renderExWin() {
+    return __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }));
   }
 
   render() {
     return __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 23
       },
       __self: this
     }, __jsx("div", {
       className: 'External',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 24
       },
       __self: this
     }, __jsx("slot", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 24
       },
       __self: this
     })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 25
       },
       __self: this
     }, __jsx(_index_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 25
       },
       __self: this
     })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 26
       },
       __self: this
     }, __jsx("mjs-host", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 26
       },
       __self: this
-    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), this.renderExWinPossibly(), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 28
       },
       __self: this
     }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
       className: 'iframe',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 28
       },
       __self: this
     }, __jsx(_src_Iframe_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -2117,7 +2170,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       onMessage: this.onSnapMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 28
       },
       __self: this
     }))));
@@ -2579,6 +2632,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "node-polyglot":
+/*!********************************!*\
+  !*** external "node-polyglot" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("node-polyglot");
 
 /***/ }),
 
