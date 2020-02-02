@@ -1,0 +1,26 @@
+{
+  "name": "olexolwebfull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkgoat/OLWebFull.git"
+  },
+  "keywords": [
+    "plugin"
+  ],
+  "author": "Graham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkgoat/OLWebFull/issues"
+  },
+  "homepage": "https://github.com/gkgoat/OLWebFull#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/gkgoat/OLWebFull#readme",
   "dependencies": {
+    "@handsontable/react": "^3.1.2",
     "@seznam/compose-react-refs": "^1.0.4",
+    "handsontable": "^7.3.0",
     "next": "^9.1.7",
     "node-polyglot": "^2.4.0",
     "react": "^16.12.0",

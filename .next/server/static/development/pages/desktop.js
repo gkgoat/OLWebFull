@@ -3,6 +3,12 @@ module.exports =
 /******/ 	// The module cache
 /******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
+/******/ 	// object to store loaded chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	var installedChunks = {
+/******/ 		"static\\development\\pages\\desktop.js": 0
+/******/ 	};
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -86,9 +92,16 @@ module.exports =
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/ 	// uncaught error handler for webpack runtime
+/******/ 	__webpack_require__.oe = function(err) {
+/******/ 		process.nextTick(function() {
+/******/ 			throw err; // catch this error by using import().catch()
+/******/ 		});
+/******/ 	};
+/******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2046,19 +2059,22 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_shadow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-shadow */ "react-shadow");
-/* harmony import */ var react_shadow__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_shadow__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_Window_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/Window.js */ "./src/Window.js");
-/* harmony import */ var _src_Iframe_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/Iframe.js */ "./src/Iframe.js");
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index.js */ "./pages/index.js");
-/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../OLEx/dist/index.js */ "../OLEx/dist/index.js");
-/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! node-polyglot */ "node-polyglot");
-/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(node_polyglot__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_shadow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-shadow */ "react-shadow");
+/* harmony import */ var react_shadow__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_shadow__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _src_Window_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/Window.js */ "./src/Window.js");
+/* harmony import */ var _src_Iframe_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/Iframe.js */ "./src/Iframe.js");
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../index.js */ "./pages/index.js");
+/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../OLEx/dist/index.js */ "../OLEx/dist/index.js");
+/* harmony import */ var _OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! node-polyglot */ "node-polyglot");
+/* harmony import */ var node_polyglot__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(node_polyglot__WEBPACK_IMPORTED_MODULE_7__);
+
 var _jsxFileName = "D:\\Graham\\ObjectLand\\main\\OLWebFull\\pages\\desktop\\index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
@@ -2066,16 +2082,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (class extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+/* harmony default export */ __webpack_exports__["default"] = (class extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props = {}) {
     super(props);
+    this.state = {
+      objectTagSheet: {},
+      HotTable: null
+    };
     this.onSnapMessage = this.onSnapMessage.bind(this);
 
     try {
-      this.renderExWinPossibly = Object(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_5__["chromeSwitch"])(() => __jsx("span", {
+      this.renderExWinPossibly = Object(_OLEx_dist_index_js__WEBPACK_IMPORTED_MODULE_6__["chromeSwitch"])(() => __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 14
         },
         __self: this
       }), this.renderExWin.bind(this));
@@ -2083,94 +2103,149 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       this.renderExWinPossibly = () => __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 16
         },
         __self: this
       });
     }
 
     ;
+    var f;
+
+    try {
+      f = fetch;
+    } catch (err) {
+      f = () => _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.reject();
+    }
+
+    ;
+    f('/pages/api/usr').then(r => r.text()).then(t => {}).catch(err => {});
+
+    try {
+      if (navigator) Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! @handsontable/react */ "@handsontable/react", 7)).then(m => this.mounted && this.setState({
+        HotTable: m.HotTable
+      }));
+    } catch (err) {}
+
+    ;
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
   }
 
   renderExWin() {
-    return __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 46
       },
       __self: this
-    }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
+    }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_2___default.a.div, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 46
       },
       __self: this
     }));
   }
 
   render() {
-    return __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
+    let HotTable;
+
+    try {
+      if (navigator) HotTable = this.state.HotTable;
+    } catch (err) {
+      HotTable = function (props) {
+        return __jsx("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        });
+      };
+    }
+
+    ;
+    return __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_2___default.a.div, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 57
       },
       __self: this
     }, __jsx("div", {
       className: 'External',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 58
       },
       __self: this
-    }, __jsx("slot", {
+    }, this.props.children, __jsx("slot", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 58
       },
       __self: this
-    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 59
       },
       __self: this
-    }, __jsx(_index_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_index_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 59
       },
       __self: this
-    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 60
       },
       __self: this
     }, __jsx("mjs-host", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 60
       },
       __self: this
-    })), this.renderExWinPossibly(), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 61
       },
       __self: this
-    }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_1___default.a.div, {
+    }, HotTable && __jsx(HotTable, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    })), this.renderExWinPossibly(), __jsx(_src_Window_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }, __jsx(react_shadow__WEBPACK_IMPORTED_MODULE_2___default.a.div, {
       className: 'iframe',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 63
       },
       __self: this
-    }, __jsx(_src_Iframe_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_src_Iframe_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
       src: 'https://snap.berkeley.edu',
       onMessage: this.onSnapMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 63
       },
       __self: this
     }))));
@@ -2491,7 +2566,7 @@ async function changeLanguage(set, theRef) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**************************************!*\
   !*** multi ./pages/desktop/index.js ***!
   \**************************************/
@@ -2500,6 +2575,17 @@ async function changeLanguage(set, theRef) {
 
 module.exports = __webpack_require__(/*! D:\Graham\ObjectLand\main\OLWebFull\pages\desktop\index.js */"./pages/desktop/index.js");
 
+
+/***/ }),
+
+/***/ "@handsontable/react":
+/*!**************************************!*\
+  !*** external "@handsontable/react" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@handsontable/react");
 
 /***/ }),
 
