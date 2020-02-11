@@ -11,12 +11,13 @@ module.exports.decorateTerm = function decorateTerm(Old,env){
     render(){
         if(this.state.isDesktopOL)return env.React.createElement('div',{ref: e => {
             ReactDOM.render(<Desktop>{<span ref = {d => {
-                env.React.render(this.props.customChildren,d)
-            }
-        }></span>}</Desktop>,e)}});
+                env.React.render(this.props.customChildren,d);
+                if(typeof this.props.fRef === 'function'){this.props.fRef(e)}else{this.props.fRef.current = e};
+            }}></span>}</Desktop>,e)
+        }});
         return env.React.createElement(Old,Object.assign({},this.props,{ref: this.props.fRef}),this.props.children)}
 
     };
-return env.React.forwardRef((ref,props) => (env.React.createElement(New,props,props.children)))
+return env.React.forwardRef((ref,props) => (env.React.createElement(New,Object.assign({},props,{fRef: ref}),props.children)))
 
 };

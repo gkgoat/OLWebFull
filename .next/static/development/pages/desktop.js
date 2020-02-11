@@ -10854,7 +10854,7 @@ function changeLanguage(set, theRef) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fdesktop&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cdesktop%5Cindex.js ***!
   \**************************************************************************************************************************************************/
@@ -10877,5 +10877,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=desktop.js.map

@@ -101,7 +101,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2566,7 +2566,7 @@ async function changeLanguage(set, theRef) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**************************************!*\
   !*** multi ./pages/desktop/index.js ***!
   \**************************************/
