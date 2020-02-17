@@ -1,20 +1,43 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_d6a88dbe3071bd165157.js",
-    "static/development/dll/dll_d6a88dbe3071bd165157.js.map"
-  ],
+  "devFiles": [],
   "pages": {
+    "/": [
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
+    ],
+    "/3desktop": [
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
+    ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
     ],
     "/_polyfills": [
-      "static/runtime/polyfills.js",
-      "static/runtime/polyfills.js.map"
+      "static/runtime/polyfills-f5af81b00d12d923ec0f.js"
+    ],
+    "/desktop": [
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
+    ],
+    "/discord": [
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-490a90243868681873b3.js",
+      "static/chunks/commons.bb752d536699a742dcd3.js",
+      "static/runtime/main-4f1fa5d937545df80e00.js"
     ]
   }
 }

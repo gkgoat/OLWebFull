@@ -1,10 +1,2250 @@
 {
-  "./dev/noop": [
+  "@handsontable/react": [
     {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
+      "id": "+0Yr",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/own-keys.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+1l7",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/native-symbol.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+AgS",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/html.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+PK7",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.number.is-integer.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+UVB",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.concat.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+lgv",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/redefine-all.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+s0g",
+      "name": "./node_modules/moment/locale/nl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "+suM",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-html-forced.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "//9w",
+      "name": "./node_modules/moment/locale/se.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "/C0I",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "/X5v",
+      "name": "./node_modules/moment/locale/x-pseudo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "/bqI",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-define-properties.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "/nAu",
+      "name": "./node_modules/handsontable/es/helpers/setting.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "/w8W",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-integer.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0+aj",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/iterate.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0+je",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.find.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0K5x",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-species-create.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0L1Y",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.starts-with.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0SjW",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/descriptors.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0mo+",
+      "name": "./node_modules/moment/locale/bo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0tRk",
+      "name": "./node_modules/moment/locale/pt-br.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "0uR0",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/task.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "1DV4",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/ie8-dom-define.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "1UbN",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.trim.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "1iua",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-pure.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "1rYy",
+      "name": "./node_modules/moment/locale/hy-am.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "1xZ4",
+      "name": "./node_modules/moment/locale/ca.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "2OSh",
+      "name": "./node_modules/handsontable/es/helpers/browser.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "2fjn",
+      "name": "./node_modules/moment/locale/fr-ca.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "2ykv",
+      "name": "./node_modules/moment/locale/nl-be.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "34Ea",
+      "name": "./node_modules/handsontable/es/tableView.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "3CSJ",
+      "name": "./node_modules/handsontable/es/editors/_baseEditor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "3E1r",
+      "name": "./node_modules/moment/locale/hi.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "3Not",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.set.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "3Y3i",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/engine-is-ios.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "3iZ5",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/shared.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4MV3",
+      "name": "./node_modules/moment/locale/gu.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4VbE",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/classof.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4Vhj",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.ends-with.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4cYa",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/enum-bug-keys.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4dOw",
+      "name": "./node_modules/moment/locale/en-ie.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "4zB4",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-last-index-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "5+HW",
+      "name": "./node_modules/handsontable/es/selection/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "5cu1",
+      "name": "./node_modules/handsontable/es/selection/mouseEventHandler.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "6+QB",
+      "name": "./node_modules/moment/locale/ms.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "6B0Y",
+      "name": "./node_modules/moment/locale/km.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "6dB4",
+      "name": "./node_modules/hot-formula-parser/dist/formula-parser.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "7BjC",
+      "name": "./node_modules/moment/locale/et.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "7JRE",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/collection-weak.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "7aV9",
+      "name": "./node_modules/moment/locale/si.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8/+R",
+      "name": "./node_modules/moment/locale/pa-in.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8HKv",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/inspect-source.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8l9Y",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/advance-string-index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8mBD",
+      "name": "./node_modules/moment/locale/pt.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8n1O",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/an-instance.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8oxB",
+      "name": "./node_modules/process/browser.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "8ugl",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/global.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "97MN",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-integer.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9BwI",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/add-to-unscopables.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9Gn5",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-repeat.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9Nua",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/web.immediate.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9X6e",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/regexp-sticky-helpers.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9cSH",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-for-each.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "9rRi",
+      "name": "./node_modules/moment/locale/gd.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "A+xa",
+      "name": "./node_modules/moment/locale/cv.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "AQ68",
+      "name": "./node_modules/moment/locale/uz-latn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "AbWC",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/inherit-if-required.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Aie3",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/get-built-in.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "AvvY",
+      "name": "./node_modules/moment/locale/ml.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "B4Gi",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.index-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "B55N",
+      "name": "./node_modules/moment/locale/ja.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "BQrY",
+      "name": "./node_modules/handsontable/es/utils/parseTable.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "BVg3",
+      "name": "./node_modules/moment/locale/is.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "BvIm",
+      "name": "./node_modules/handsontable/es/3rdparty/walkontable/src/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ByF4",
+      "name": "./node_modules/moment/locale/fo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "CBTZ",
+      "name": "./node_modules/handsontable/es/helpers/dom/element.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "CI+I",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/an-object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "CjzT",
+      "name": "./node_modules/moment/locale/es-do.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "CoRJ",
+      "name": "./node_modules/moment/locale/ar-ma.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Ctid",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-create.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "D/JM",
+      "name": "./node_modules/moment/locale/eu.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "DA8Y",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-forced.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "DKr+",
+      "name": "./node_modules/moment/locale/gom-latn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "DZ7S",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.set-prototype-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Dkky",
+      "name": "./node_modules/moment/locale/fr-ch.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Dmvi",
+      "name": "./node_modules/moment/locale/en-au.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "DoHr",
+      "name": "./node_modules/moment/locale/tr.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "DxQv",
+      "name": "./node_modules/moment/locale/da.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Dzi0",
+      "name": "./node_modules/moment/locale/tl-ph.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "E+lV",
+      "name": "./node_modules/moment/locale/sr-cyrl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "E3MR",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.split.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ENXV",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/correct-prototype-getter.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "EOHf",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/set-species.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "EOgW",
+      "name": "./node_modules/moment/locale/th.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "EbNw",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-regexp.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Eums",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-string-tag-support.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "F/P8",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-method-is-strict.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "F4tU",
+      "name": "./node_modules/handsontable/es/helpers/templateLiteralTag.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "FG9+",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/internal-metadata.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "FN3v",
+      "name": "./node_modules/handsontable/es/editorManager.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "FOa4",
+      "name": "./node_modules/pikaday/pikaday.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "FplX",
+      "name": "./node_modules/handsontable/es/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "FuDn",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.get-own-property-descriptors.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "G0Uy",
+      "name": "./node_modules/moment/locale/mt.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "GLOT",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.to-string.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Gc3Q",
+      "name": "./node_modules/handsontable/lib/jsonpatch/json-patch-duplex.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Gsue",
+      "name": "./node_modules/handsontable/es/dataSource.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "H38T",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/a-function.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "H8ED",
+      "name": "./node_modules/moment/locale/be.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "HE2y",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.map.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "HHQa",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.number.constructor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "HK+M",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/create-property-descriptor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "HP3h",
+      "name": "./node_modules/moment/locale/ar-ly.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "HQcV",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/copy-constructor-properties.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Hahq",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-assign.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Hp6/",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.function.name.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "I9TJ",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/collection-strong.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "IBtZ",
+      "name": "./node_modules/moment/locale/ka.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "IXmL",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/document-create-element.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Ivi+",
+      "name": "./node_modules/moment/locale/ko.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "J/n8",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.fill.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "J9yy",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-includes.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JSWj",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/define-iterator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JVSJ",
+      "name": "./node_modules/moment/locale/bs.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JeGf",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/function-bind.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JhHo",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.regexp.constructor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JvlW",
+      "name": "./node_modules/moment/locale/lt.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "JwPz",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.assign.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "K/tc",
+      "name": "./node_modules/moment/locale/af.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "K3kw",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-pad-webkit-bug.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "KMcW",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-pad.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "KSF8",
+      "name": "./node_modules/moment/locale/vi.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "KTz0",
+      "name": "./node_modules/moment/locale/me.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "KxG2",
+      "name": "./node_modules/handsontable/es/helpers/mixed.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "L8Lv",
+      "name": "./node_modules/handsontable/es/helpers/date.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "LF7L",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.slice.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "LS1B",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/create-non-enumerable-property.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Loxo",
+      "name": "./node_modules/moment/locale/uz.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "MQtI",
+      "name": "./node_modules/handsontable/es/helpers/data.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "MeIp",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.reflect.get.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "MlFG",
+      "name": "./node_modules/handsontable/es/helpers/array.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "N+gM",
+      "name": "./node_modules/handsontable/es/helpers/number.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "NBPA",
+      "name": "./node_modules/handsontable/es/helpers/console.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "NOe1",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.weak-map.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Nh8k",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-from.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Nzcn",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.symbol.description.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ODe7",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/web.dom-collections.iterator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "OIYi",
+      "name": "./node_modules/moment/locale/en-ca.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Oaa7",
+      "name": "./node_modules/moment/locale/en-gb.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Ob0Z",
+      "name": "./node_modules/moment/locale/mr.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Oh6k",
+      "name": "./node_modules/handsontable/es/plugins.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Oiei",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-method-uses-to-length.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "OjkT",
+      "name": "./node_modules/moment/locale/ne.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "OrbW",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.pad-start.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "P7JW",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.regexp.to-string.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "PA2r",
+      "name": "./node_modules/moment/locale/cs.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "PKIH",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "PRZV",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.get-prototype-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Pac9",
+      "name": "./node_modules/@handsontable/react/es/react-handsontable.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "PeUW",
+      "name": "./node_modules/moment/locale/ta.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Pio7",
+      "name": "./node_modules/handsontable/es/helpers/dom/event.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "PpIw",
+      "name": "./node_modules/moment/locale/kn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "QZRB",
+      "name": "./node_modules/handsontable/es/utils/staticRegister.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Qj4J",
+      "name": "./node_modules/moment/locale/ar-kw.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "QsIa",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.from.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "RAwQ",
+      "name": "./node_modules/moment/locale/lb.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "RNB1",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/engine-v8-version.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "RYVb",
+      "name": "./node_modules/handsontable/es/helpers/unicode.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "RlQg",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-fill.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "RnhZ",
+      "name": "./node_modules/moment/locale sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "S6ln",
+      "name": "./node_modules/moment/locale/hr.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "SFxW",
+      "name": "./node_modules/moment/locale/az.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "SFxm",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-get-own-property-descriptor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "SatO",
+      "name": "./node_modules/moment/locale/zh-hk.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "SqVQ",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-get-own-property-symbols.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "T5c5",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-get-prototype-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "T7b+",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.iterator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "U1dE",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.reverse.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "U6Cr",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.link.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "UDhR",
+      "name": "./node_modules/moment/locale/id.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "URgk",
+      "name": "./node_modules/timers-browserify/main.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "UpQW",
+      "name": "./node_modules/moment/locale/ur.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Ur1D",
+      "name": "./node_modules/moment/locale/ss.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "V2x9",
+      "name": "./node_modules/moment/locale/tet.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "V8kI",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.symbol.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "VBFe",
+      "name": "./node_modules/handsontable/es/mixins/localHooks.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "VNf/",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/shared-store.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Vclq",
+      "name": "./node_modules/moment/locale/es-us.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "WGC9",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-to-array.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "WSq+",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/uid.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "WYrj",
+      "name": "./node_modules/moment/locale/dv.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "WxRl",
+      "name": "./node_modules/moment/locale/hu.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "X3aE",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.reflect.construct.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "X709",
+      "name": "./node_modules/moment/locale/sv.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XDpg",
+      "name": "./node_modules/moment/locale/zh-cn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XLvN",
+      "name": "./node_modules/moment/locale/te.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XPeI",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/define-well-known-symbol.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XaPM",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/check-correctness-of-iteration.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XbNv",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/species-constructor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "XlCY",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.search.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Y28R",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.number.to-fixed.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "YBdB",
+      "name": "./node_modules/setimmediate/setImmediate.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "YNp3",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.map.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "YuTi",
+      "name": "./node_modules/webpack/buildin/module.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Z/Je",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.weak-set.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Z4QM",
+      "name": "./node_modules/moment/locale/sd.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Z8mJ",
+      "name": "./node_modules/handsontable/es/renderers/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ZAMP",
+      "name": "./node_modules/moment/locale/ms-my.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ZS36",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-keys-internal.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Zcbm",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/engine-user-agent.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Zduo",
+      "name": "./node_modules/moment/locale/eo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "Zm0J",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-get-own-property-names-external.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aIdf",
+      "name": "./node_modules/moment/locale/br.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aIsn",
+      "name": "./node_modules/moment/locale/mi.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aQkU",
+      "name": "./node_modules/moment/locale/mk.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aRLe",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/not-a-regexp.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aZBk",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-iteration.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "akOn",
+      "name": "./node_modules/handsontable/es/i18n/utils.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "aycT",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-absolute-index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "b1Dy",
+      "name": "./node_modules/moment/locale/en-nz.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bDIV",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.replace.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bK7x",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/web.dom-collections.for-each.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bOMt",
+      "name": "./node_modules/moment/locale/nb.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bXm7",
+      "name": "./node_modules/moment/locale/kk.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bYM6",
+      "name": "./node_modules/moment/locale/ar-tn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "binF",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/array-method-has-species-support.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "bpih",
+      "name": "./node_modules/moment/locale/it.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "c5xK",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/web.timers.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "c9mk",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/a-possible-prototype.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "cRix",
+      "name": "./node_modules/moment/locale/fy.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "cX7s",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/well-known-symbol-wrapped.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "dEVN",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/iterators-core.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "dNWL",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.filter.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "dNwA",
+      "name": "./node_modules/moment/locale/sw.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "dnns",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/redefine.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "dtHg",
+      "name": "./node_modules/handsontable/es/pluginHooks.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "e+ae",
+      "name": "./node_modules/moment/locale/sk.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ehTq",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/regexp-exec-abstract.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "exhg",
+      "name": "./node_modules/handsontable/es/i18n/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "fCuA",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-set-prototype-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "fWH4",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/function-bind-context.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "fywa",
+      "name": "./node_modules/handsontable/lib/autoResize/autoResize.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "fzPg",
+      "name": "./node_modules/moment/locale/yo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "g+I9",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-trim-forced.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "g5rG",
+      "name": "./node_modules/handsontable/es/helpers/function.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gLAL",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.includes.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gN18",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/well-known-symbol.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gNJs",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.match.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gVVK",
+      "name": "./node_modules/moment/locale/sl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gbdj",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/indexed-object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gekB",
+      "name": "./node_modules/moment/locale/fi.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gjCT",
+      "name": "./node_modules/moment/locale/ar-sa.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "gzsR",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.keys.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "h5Ne",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hFG1",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/call-with-safe-iteration-closing.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hKA7",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-multibyte.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hKrs",
+      "name": "./node_modules/moment/locale/bg.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hNjl",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-primitive.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hh6g",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/hidden-keys.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "honF",
+      "name": "./node_modules/moment/locale/my.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "hyLW",
+      "name": "./node_modules/numbro/dist/numbro.min.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "i7Et",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/string-trim.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "iBOv",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/native-weak-map.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "iCMi",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.code-point-at.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "iEDd",
+      "name": "./node_modules/moment/locale/gl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "iYuL",
+      "name": "./node_modules/moment/locale/es.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jDLa",
+      "name": "./node_modules/handsontable/es/eventManager.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jFjM",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.iterator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jREo",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/this-number-value.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jUeY",
+      "name": "./node_modules/moment/locale/el.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jVdC",
+      "name": "./node_modules/moment/locale/pl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jeJH",
+      "name": "./node_modules/handsontable/es/cellTypes/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jfSC",
+      "name": "./node_modules/moment/locale/fa.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jkMp",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/dom-iterables.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jnO4",
+      "name": "./node_modules/moment/locale/ar.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "jv6t",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.regexp.exec.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "k/vb",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/set-to-string-tag.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "k5RO",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-indexed-object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "k5sc",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/classof-raw.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "kDSc",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.freeze.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "kEOa",
+      "name": "./node_modules/moment/locale/bn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "kF0P",
+      "name": "./node_modules/handsontable/es/helpers/string.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "kJVB",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/whitespaces.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "kOpN",
+      "name": "./node_modules/moment/locale/zh-tw.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "krgC",
+      "name": "./node_modules/handsontable/lib/SheetClip/SheetClip.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "l2bO",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.last-index-of.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "l5ep",
+      "name": "./node_modules/moment/locale/cy.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "l9z0",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/regexp-flags.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "lXzo",
+      "name": "./node_modules/moment/locale/ru.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "lYLb",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/get-iterator-method.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "lgnt",
+      "name": "./node_modules/moment/locale/ky.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "lyxo",
+      "name": "./node_modules/moment/locale/ro.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "mCkv",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.find-index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "mFTN",
+      "name": "./node_modules/handsontable/es/utils/recordTranslator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "mFqO",
+      "name": "./node_modules/handsontable/es/helpers/feature.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "n4g5",
+      "name": "./node_modules/handsontable/es/utils/rootInstance.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "nHY6",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/use-symbol-as-uid.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "nyYc",
+      "name": "./node_modules/moment/locale/fr.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "o1bE",
+      "name": "./node_modules/moment/locale/ar-dz.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ouGi",
+      "name": "./node_modules/handsontable/es/dataMap.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "owFp",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/create-iterator-constructor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "p/rL",
+      "name": "./node_modules/moment/locale/bm.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "pFWg",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/freezing.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "pg24",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-define-property.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "po1B",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/internal-state.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "qG4D",
+      "name": "./node_modules/handsontable/es/helpers/object.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "qyU5",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/shared-key.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "r19V",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/set-global.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "r95t",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/path.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "rE95",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/export.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "rTX8",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.string.includes.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "rZfT",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/create-html.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "raLr",
+      "name": "./node_modules/moment/locale/uk.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "s+uk",
+      "name": "./node_modules/moment/locale/de-at.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "s0PS",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/fails.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "sp3z",
+      "name": "./node_modules/moment/locale/lo.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "spJJ",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-to-string.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "srHa",
+      "name": "./node_modules/handsontable/es/editors/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "tGlX",
+      "name": "./node_modules/moment/locale/de.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "tT3J",
+      "name": "./node_modules/moment/locale/tzm-latn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "tUCv",
+      "name": "./node_modules/moment/locale/jv.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "tqcH",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.get-own-property-descriptor.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "tsS1",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.get-own-property-names.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "u3GI",
+      "name": "./node_modules/moment/locale/de-ch.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "uEye",
+      "name": "./node_modules/moment/locale/nn.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "uXwI",
+      "name": "./node_modules/moment/locale/lv.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "uc7Q",
+      "name": "./node_modules/handsontable/es/i18n/dictionariesManager.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ulFu",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-property-is-enumerable.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "v3hB",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/require-object-coercible.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "vf6z",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-array.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "vvE/",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-get-own-property-names.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "vzaS",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.sort.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "w0sY",
+      "name": "./node_modules/handsontable/es/validators/index.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wEGC",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/object-keys.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wQk9",
+      "name": "./node_modules/moment/locale/tzm.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wWq6",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/regexp-exec.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wXWY",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.splice.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wd/R",
+      "name": "./node_modules/moment/moment.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wf/W",
+      "name": "./node_modules/handsontable/es/i18n/constants.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "wnLY",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/iterators.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "x2OY",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/correct-is-regexp-logic.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "x6pH",
+      "name": "./node_modules/moment/locale/he.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "xa44",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/to-length.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "y/Jj",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/is-array-iterator-method.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "yFWG",
+      "name": "./node_modules/handsontable/es/selection/utils.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "yJou",
+      "name": "./node_modules/handsontable/es/utils/keyStateObserver.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "yNhs",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.symbol.iterator.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "yPMs",
+      "name": "./node_modules/moment/locale/sq.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "ypJe",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.array.join.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "yseT",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/create-property.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "z1FC",
+      "name": "./node_modules/moment/locale/tzl.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "z3Vd",
+      "name": "./node_modules/moment/locale/tlh.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "z80Q",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/has.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "z9hZ",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/same-value.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "zDcX",
+      "name": "./node_modules/handsontable/es/defaultSettings.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "zcAo",
+      "name": "./node_modules/handsontable/node_modules/core-js/modules/es.object.values.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "zhOW",
+      "name": "./node_modules/handsontable/node_modules/core-js/internals/collection.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "zwuV",
+      "name": "./node_modules/handsontable/es/core.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    },
+    {
+      "id": "zx6S",
+      "name": "./node_modules/moment/locale/sr.js",
+      "file": "static/chunks/10.58e8905445533bc46ce4.js",
+      "publicPath": "static/chunks/10.58e8905445533bc46ce4.js"
+    }
+  ],
+  "react-mutation-observer": [
+    {
+      "id": "2SQs",
+      "name": "./node_modules/lodash.omit/index.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "3DZ5",
+      "name": "./node_modules/react-mutation-observer/lib/withObserver.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "57gW",
+      "name": "./node_modules/core-decorators/es/core-decorators.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "6UlO",
+      "name": "./node_modules/react-mutation-observer/lib/MutationObserver.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "9BcC",
+      "name": "./node_modules/react-mutation-observer/lib/WatchForChildrenAddition.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "ALg3",
+      "name": "./node_modules/react-mutation-observer/lib/WatchForChildrenRemoval.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "HoCz",
+      "name": "./node_modules/react-mutation-observer/lib/WatchContent.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "Q89C",
+      "name": "./node_modules/react-mutation-observer/lib/WatchChildren.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "QKtw",
+      "name": "./node_modules/react-mutation-observer/lib/WatchForMutation.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "X3Z6",
+      "name": "./node_modules/memoizerific/memoizerific.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "XaGS",
+      "name": "./node_modules/lodash.isequal/index.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "YuTi",
+      "name": "./node_modules/webpack/buildin/module.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "fqUN",
+      "name": "./node_modules/react-mutation-observer/lib/index.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "nH6N",
+      "name": "./node_modules/react-mutation-observer/lib/WatchForRemoval.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
+    },
+    {
+      "id": "w/3H",
+      "name": "./node_modules/react-mutation-observer/lib/WatchAttributes.js",
+      "file": "static/chunks/17.91fa27ce55f41b44e927.js",
+      "publicPath": "static/chunks/17.91fa27ce55f41b44e927.js"
     }
   ]
 }

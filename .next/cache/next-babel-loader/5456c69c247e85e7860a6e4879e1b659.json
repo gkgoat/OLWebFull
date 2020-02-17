@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nexport default (props => {\n  return __jsx(\"box\", null, __jsx(\"filemanager\", {\n    cwd: props.cwd || props.setCWD(props.prefix),\n    onCd: v => {\n      if (v.beginsWith(props.prefix)) props.setCWD(v);\n    }\n  }));\n});","map":null,"metadata":{},"sourceType":"module"}
