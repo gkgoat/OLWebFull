@@ -12,6 +12,7 @@ import * as R from 'ramda'
 import * as Polyglot from 'node-polyglot'
 import { create } from "react-test-renderer";
 import MainWorker from '../../src/main.worker.js'
+let DefaultDOMCanvas = props => (<canvas {...props} ref = {props.onCanvas}></canvas>)
 export default class Desktop extends React.Component{
     constructor(props = {}){
 super(props);
@@ -90,10 +91,11 @@ isBrowser = true;
     let Div = this.props.div || root.div;
     let Window = this.props.Window || Window_;
     let Iframe = this.props.Iframe || Iframe_;
+    let DOMCanvas = this.props.Canvas || DefaultDOMCanvas;
     let MyMutationObserver = this.props.Observer || (this.state.d_a && this.state.d_a.MutationObserver) || (props => props.children);
     MyMutationObserver = (Old => props => Old && (<Old {...props} subtree = {true}>{props.children}</Old>))(MyMutationObserver);
     MyMutationObserver = MyMutationObserver || (props => props.children);
-    let lib = {div: Div,Window,Iframe,MutationObserver: MyMutationObserver};
+    let lib = {div: Div,Window,Iframe,MutationObserver: MyMutationObserver,DOMInterop: {DOMCanvas}};
     let windows = (this.props.windows || [])
     .concat(this.props.div === null ? [{id: 'welcome',render: (React) => {return (<MainWelcomePage></MainWelcomePage>)}}] : [])
     .concat(discord ? [{id: 'discord',render: (React,lib) => {let theDiscord = Discord(React,useState);return (<lib.Div><theDiscord lib = {lib} discord = {discord}></theDiscord></lib.Div>)}}] : [])

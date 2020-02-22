@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import root from 'react-shadow';
 import {chromeSwitch} from '../../../OLEx/dist/index.js'
 import * as Polyglot from 'node-polyglot'
-import { Canvas, useFrame, useThree } from 'react-three-fiber'
+import { Canvas, useFrame, useThree, Dom } from 'react-three-fiber'
 import DragControls from 'three-dragcontrols';
 export let Box = React.forwardRef(function Box(props,ref) {
     
@@ -24,7 +24,8 @@ export let Box = React.forwardRef(function Box(props,ref) {
     )
   })
   let ThreeRef = props => {props.setThree(useThree()); return null};
+  let DOMCanvas = props => (<Dom><canvas ref = {props.onCanvas} {...props}></canvas></Dom>)
 export default props => {let Desktop = props.dcls;let [three,setThree] = useState(); if(three)var {camera,gl} = three;let [objs,setObjs] = useState(); if(!objs)setObjs([]); useEffect(() => {let d = new DragControls(objs,camera,gl.domElements);return d.dispose.bind(d)},[props.dcls,objs]); return (<Canvas>
- <Desktop Div = {Box} Window = {wprops => {let r = useRef();useEffect(() => {setObjs((objs || []).concat([r.current])); return () => setObjs(objs.filter(o => o !== r.current))}); return (<Box {...wprops} ref = {r}></Box>)}} Iframe = {Box}></Desktop>
+ <Desktop Div = {Box} Canvas = {DOMCanvas} Window = {wprops => {let r = useRef();useEffect(() => {setObjs((objs || []).concat([r.current])); return () => setObjs(objs.filter(o => o !== r.current))}); return (<Box {...wprops} ref = {r}></Box>)}} Iframe = {Box}></Desktop>
 <ThreeRef setThree = {setThree}></ThreeRef>
 </Canvas>)}

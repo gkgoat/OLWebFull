@@ -24,6 +24,7 @@
     "blessed": "^0.1.81",
     "discord.js": "^11.5.1",
     "handsontable": "^7.3.0",
+    "mysql": "github:mysqljs/mysql",
     "next": "^9.1.7",
     "node-polyglot": "^2.4.0",
     "ramda": "^0.27.0",
