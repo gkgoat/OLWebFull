@@ -14,12 +14,13 @@ app.prepare().then(() => {
 
 
     };
-  createServer((req, res) => {
+  let s = createServer((req, res) => {
     // Be sure to pass `true` as the second argument to `url.parse`.
     // This tells it to parse the query portion of the URL.
     const parsedUrl = parse(req.url, true)
     const { pathname, query } = parsedUrl
 res.discord = client;
+req.server = s;
       handle(req, res, parsedUrl)
   }).listen(3000, err => {
     if (err) throw err

@@ -19,7 +19,7 @@ export default function useEventListener(eventName, handler,onName,offName, elem
         if (!isSupported) return;
         
         // Create event listener that calls handler function stored in ref
-        const eventListener = event => savedHandler.current(event);
+        const eventListener = (...es) => savedHandler.current(...es);
         
         // Add event listener
         element[onName](eventName, eventListener);

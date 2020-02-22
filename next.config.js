@@ -3,6 +3,10 @@ module.exports = {
       // Note: we provide webpack above so you should not `require` it
       // Perform customizations to webpack config
       // Important: return the modified config
+      config.module.rules.push(      {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader',options: {inline: true,fallback: false} }
+      });
       return config
     },
     webpackDevMiddleware: config => {

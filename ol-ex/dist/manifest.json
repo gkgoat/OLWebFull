@@ -1,0 +1,12 @@
+{
+    "name": "OL",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "permissions": [
+      "tabs"
+    ],
+    "background": {
+"scripts": ["background.js"]
+
+    }
+  }

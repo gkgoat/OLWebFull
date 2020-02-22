@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default (host => ({}));","map":{"version":3,"sources":["D:/Graham/ObjectLand/main/OLWebFull/src/DiscordPolyfill.js"],"names":["host"],"mappings":"AAAA,gBAAeA,IAAI,KAAK,EAAL,CAAnB","sourcesContent":["export default host => ({})"]},"metadata":{},"sourceType":"module"}
