@@ -12,6 +12,7 @@ import * as R from 'ramda'
 import * as Polyglot from 'node-polyglot'
 import { create } from "react-test-renderer";
 import MainWorker from '../../src/main.worker.js'
+import * as ExtensionLib from '../../ol-ex/lib.js'
 let DefaultDOMCanvas = props => (<canvas {...props} ref = {props.onCanvas}></canvas>)
 export default class Desktop extends React.Component{
     constructor(props = {}){
@@ -100,7 +101,9 @@ isBrowser = true;
     .concat(this.props.div === null ? [{id: 'welcome',render: (React) => {return (<MainWelcomePage></MainWelcomePage>)}}] : [])
     .concat(discord ? [{id: 'discord',render: (React,lib) => {let theDiscord = Discord(React,useState);return (<lib.Div><theDiscord lib = {lib} discord = {discord}></theDiscord></lib.Div>)}}] : [])
     .concat(isBrowser  && Desktop3D ? [{id: 'three',render: rct => (<Desktop3D dcls = {Desktop} linkParent = {this}></Desktop3D>)}] : [])
-    .concat(Iframe.canRenderHTML ? [{id: 'langs',render: r => (<Iframe.html src = {(() => {try{return location.hostname + '/lang/' + lang}catch(err){return ''}})()} windowRef = {win => {ReactDOM.render(<Div></Div>,win.document.querySelector('#firstHeading'))}}></Iframe.html>)}] : []).concat([]).concat(this.state.windows)
+    .concat(Iframe.canRenderHTML ? [{id: 'langs',render: r => (<Iframe.html src = {(() => {try{return location.hostname + '/lang/' + lang}catch(err){return ''}})()} windowRef = {win => {ExtensionLib.dr(win.document.querySelector('#firstHeading'))}}></Iframe.html>)}] : [])
+    .concat([])
+    .concat(this.state.windows)
     let rw = w => (<MyMutationObserver key = {w.id}><Window><MyMutationObserver>{w.render(React,lib,this.state.appDataMap.get(w.id),(v) => {this.setState({appDataMap: new Map(this.state.appDataMap).set(w.id,v)})})}</MyMutationObserver></Window></MyMutationObserver>);
     if(this.props.w)wrap = R.pipe(wrap,this.props.w.bind(null,lib));
     if(this.state.usesSingleWindow)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div>{this.state.currentWindow ? rw(this.state.currentWindow) : this.props.children}</Div></MyMutationObserver>));
