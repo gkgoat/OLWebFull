@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -4812,10 +4812,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fgraham%2Fol%2FOLWebFull%2Fpages%2Findex.js!./":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fgraham%2Fol%2FOLWebFull%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cindex.js!./":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cindex.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8621,6 +8621,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _src_Window_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/Window.js */ "./src/Window.js");
 /* harmony import */ var _src_lang_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/lang.js */ "./src/lang.js");
+var _jsxFileName = "D:\\Graham\\ObjectLand\\main\\OLWebFull\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -8631,13 +8632,106 @@ var changeLanguage = global.localStorage && _src_lang_js__WEBPACK_IMPORTED_MODUL
 function MainWelcomePage() {
   var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var theRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
-  return __jsx("div", null, __jsx("p", {
-    ref: theRef
-  }), __jsx("h3", null, "Desktop ", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/desktop"
-  }, __jsx("a", null, "here"))), global.localStorage && (localStorage.getItem('lang') || !localStorage.getItem('lang') && localStorage.getItem('lang-temp')) || __jsx("span", null, __jsx("button", {
-    onClick: changeLanguage && changeLanguage.bind(null, theRef)
-  }, "Confirm Language")), __jsx("h1", null, "Welcome To ObjectLand", props.user ? ',' : '.', " ", props.user && props.user.name || '', props.user && '.'), __jsx("div", null, __jsx("h2", null, "Pureness"), __jsx("p", null, "ObjectLand's Squeak runtime is pure. ObjectLand's JavaScript runtime is mostly pure"), __jsx("p", null, "Pure means that:", __jsx("ul", null, __jsx("li", null, "Everything is an object and it takes things from something"), __jsx("li", null, "Every object holds state, which are objects"), __jsx("li", null, "Every object communicates by sending messages to other objects")))));
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("p", {
+    ref: theRef,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }), __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Desktop ", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/desktop",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "here"))), global.localStorage && (localStorage.getItem('lang') || !localStorage.getItem('lang') && localStorage.getItem('lang-temp')) || __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: changeLanguage && changeLanguage.bind(null, theRef),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Confirm Language")), __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Welcome To ObjectLand", props.user ? ',' : '.', " ", props.user && props.user.name || '', props.user && '.'), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Pureness"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "ObjectLand's Squeak runtime is pure. ObjectLand's JavaScript runtime is mostly pure"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Pure means that:", __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, "Everything is an object and it takes things from something"), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Every object holds state, which are objects"), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, "Every object communicates by sending messages to other objects")))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MainWelcomePage);
@@ -8669,6 +8763,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "D:\\Graham\\ObjectLand\\main\\OLWebFull\\src\\Window.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -8688,8 +8783,37 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return __jsx(react_draggable__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        handle: "span"
-      }, __jsx("div", null, __jsx("span", null, "X", __jsx("span", null, '_______')), __jsx("div", null, this.props.children)));
+        handle: "span",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 4
+        },
+        __self: this
+      }, __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 4
+        },
+        __self: this
+      }, __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 4
+        },
+        __self: this
+      }, "X", __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 4
+        },
+        __self: this
+      }, '_______')), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 4
+        },
+        __self: this
+      }, this.props.children)));
     }
   }]);
 
@@ -8720,6 +8844,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
 
 
+var _jsxFileName = "D:\\Graham\\ObjectLand\\main\\OLWebFull\\src\\lang.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -8739,10 +8864,26 @@ function changeLanguage(set, theRef) {
           win = open('https://'.concat(lang.concat('.wikipedia.org')));
           _context.next = 4;
           return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(new _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a(function (c) {
-            react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(__jsx("p", null, __jsx("button", {
-              onClick: c.bind(null, true)
+            react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(__jsx("p", {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 9
+              },
+              __self: this
+            }, __jsx("button", {
+              onClick: c.bind(null, true),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 9
+              },
+              __self: this
             }, "Confirm"), __jsx("button", {
-              onClick: c.bind(null, false)
+              onClick: c.bind(null, false),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 9
+              },
+              __self: this
             }, "Cancel")), theRef.current);
           }));
 
@@ -8762,13 +8903,13 @@ function changeLanguage(set, theRef) {
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fgraham%2Fol%2FOLWebFull%2Fpages%2Findex.js ***!
-  \*********************************************************************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cindex.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fgraham%2Fol%2FOLWebFull%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fgraham%2Fol%2FOLWebFull%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGraham%5CObjectLand%5Cmain%5COLWebFull%5Cpages%5Cindex.js!./");
 
 
 /***/ }),

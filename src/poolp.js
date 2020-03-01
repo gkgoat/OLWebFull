@@ -1,0 +1,2 @@
+import * as R from 'ramda'
+export default f => {let nf = (...args) => R.any(args,R.is(Promise)) ? R.find(R.is(Promise))(args).then(v => nf(...R.adjust(R.findIndex(R.is(Promise))(args),_ => v)(args))) : f(...args); return nf};
