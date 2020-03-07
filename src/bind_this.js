@@ -1,0 +1,1 @@
+export default f => function(){return f(this,...arguments)}

@@ -1,0 +1,1 @@
+export default ({document}) => props => (React => {React.useEventListener(document.querySelector('.tree-scope template .text'),'dblclick','default',event => {})})(props.React)

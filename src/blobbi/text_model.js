@@ -1,0 +1,2 @@
+let listeners = new Map();
+export default new Proxy(ctxt => async stream => {let hey = await stream.scanFor(['hey','blobby']); if(await hey.error)return;await hey.take();stream.on('data',async data => {if(data === 'open'){let app = await stream.waitApp(); await ctxt.openApp(app)}})},{get: (o,k) => k === 'on' ? (e,f) => (listeners.get(e) || (listeners.set(e,[]))).push(f): k === 'emit' ? (e,...args) => listeners.get(e).map(f => f(...args)) : k === 'off' ? (e,f) => listeners.set(e,(v => v && (v.filter(a => a !== f)))(listeners.get(e))) : o[k]})

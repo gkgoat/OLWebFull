@@ -1,0 +1,1 @@
+export default () => new Promise(c => requestAnimationFrame(c))

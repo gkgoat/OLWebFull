@@ -13,11 +13,12 @@ import * as Polyglot from 'node-polyglot'
 import { create } from "react-test-renderer";
 import MainWorker from '../../src/main.worker.js'
 import * as ExtensionLib from '../../ol-ex/lib.js'
+import BrowserWrapper from '../../src/browser_loader.js'
 let DefaultDOMCanvas = props => (<canvas {...props} ref = {props.onCanvas}></canvas>)
 export default class Desktop extends React.Component{
     constructor(props = {}){
 super(props);
-this.state = {usesSingleWindow: false,currentWindow: undefined,objectTagSheet: {},HotTable: null,appDataMap: new Map(),windows: [],d_a: undefined,javaPackage: undefined,jlink: undefined};
+this.state = {usesSingleWindow: false,currentWindow: undefined,objectTagSheet: {},HotTable: null,appDataMap: new Map(),windows: [],d_a: undefined,javaPackage: undefined,jlink: undefined,ex: undefined};
 this.state = Object.assign({},this.state,(() => {try{return {javaPackage: Packages.com.smalltalkland.slandroid,jlink: jlink}}catch(err){return {}}})());
 this.aapi_ = AAPI(React)(props.mode);
 this.aapi = code => this.aapi_(this,this.addWindow.bind(this))(code);
@@ -110,6 +111,7 @@ isBrowser = true;
 if(this.props.isWatch)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div><this.props.Watch><MyMutationObserver>{e.props.children[0].props.children[0].props.children}</MyMutationObserver></this.props.Watch></Div></MyMutationObserver>));
     if(this.props.head === 'less')wrap = R.pipe(wrap,create);
     if(this.props.head === 'embed')wrap = R.pipe(wrap,e => {e.props.children[0].props.children.map(c => c.key === 'sutils' ? c.props.children[0].props.children[0].props.children[0].children.map(nc => ReactDOM.render(nc,(e => {e.classList.add('ol');let existing = document.querySelector('.sprite-info_group_14-B_').querySelector('.ol');if(existing)return existing;document.querySelector('.sprite-info_group_14-B_')?.appendChild(e); return e})(document.createElement('div')))) : null)});
+if(this.props.connextToEx)wrap = R.pipe(wrap,e => this.props.ex ? (() => {this.setState((s,p) => ({ex: p.ex})); return e})() : (<BrowserWrapper>{v => {this.setState({ex: v});return e}}</BrowserWrapper>));
     return wrap(<MyMutationObserver><Div>
     {this.props.children}
 <Window>{HotTable && <HotTable></HotTable>}</Window>

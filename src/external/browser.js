@@ -1,0 +1,1 @@
+export default () => import('chrome-promise').then(v => v.default).catch(err => self.browser || (() => {throw new Error('_noBrowser')})()).catch(err => ({}))
