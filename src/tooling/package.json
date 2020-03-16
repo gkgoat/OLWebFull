@@ -1,0 +1,23 @@
+{
+  "name": "st-tooling",
+  "version": "1.0.0",
+  "description": "Smalltalk Tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmalltalkLand/OLWebFull.git"
+  },
+  "author": "Graham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmalltalkLand/OLWebFull/issues"
+  },
+  "homepage": "https://github.com/SmalltalkLand/OLWebFull#readme",
+  "devDependencies": {
+    "webpack": "^4.42.0",
+    "yargs": "^15.3.0"
+  }
+}

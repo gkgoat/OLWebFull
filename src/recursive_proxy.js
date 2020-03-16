@@ -1,0 +1,2 @@
+let w = f => (o,h) => f(h)(o)
+export default w(h => {let f = o => new Proxy(o,{get: (o,k) => f((h.get || ((o,k) => o[k]))(o,k)),apply: (o,t,args) => f(Function.prototype.call(h.apply || ((o,t,args) => Function.prototype.call.call(o,t,...args)),o,t,args)),construct: (o,args,t) => f(Function.prototype.call(h.construct || ((o,args,t) => Reflect.construct(o,args,t)),o,args,t))});return f})

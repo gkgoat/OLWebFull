@@ -1,0 +1,566 @@
+'copyright Xerox Corp. 1974 with parts modified and copyrighted SmalltalkLand 2020, some rights reserved'
+
+to to x (CODE 19)
+'Now definitions can be made by evaluating "to" in ST code'
+
+to read (CODE 2)
+'Read input into a vector.  The bootstrap reader is almost identical in function to the SMALLTALK read routine, except that DOIT is signalled by <CR> at zero-th parenthesis level, and single-quote strings are ignored.'
+
+to vector (CODE 3)
+'This defines the eval method (and more that will be described later) for code vectors.'
+
+to USER (read eval)
+'This is the top-level user program.  Its class variables also serve as the global symbol table (also known in the interpreter as TopLev).'
+
+
+to isnew (CODE 5)
+
+to falseclass (isnew)
+
+to atom x y (CODE 29)
+
+"false _ falseclass.
+
+to print (%..)
+	':x.Print its address in octal.
+	Printing goes to the same place as CODE 20. This is used primarily
+	for bootstrapping. All system classes will print themselves.'
+
+
+ 
+
+'MESSAGE HANDLING'
+
+to : (CODE 18)
+	'to : name
+
+	%" ?(:"name nil ?(!name_caller message quotefetch)
+				(!caller message quotefetch))
+
+	Fetch the next thing in the message stream unevaluated
+	and bind it to the name if one is there.
+
+	%# ?(:"name nil ?(!name_caller message referencefetch)
+				(!caller message referencefetch))
+
+	Fetch the reference to next thing in the message stream
+	and bind it to the name if one is there.
+
+		(:"name nil ?(!name_ caller message evalfetch)
+			!caller message evalfetch)
+
+	Fetch the next thing in the message stream evaluated
+	and bind it to the name if one is there.'
+
+to % (CODE 17)
+	':"token. token=caller.message.code[caller.message.pc]?
+		(caller.message.pc_caller.message.pc+1. !true) !false.
+	That is, if a match for the token is found in the message, then
+ 	gobble it up and return true, else return false.'
+
+to # (CODE 36)
+	'Fetch the next token quoted -- equivalent to (:").'
+
+to ! (CODE 13)
+	':x. then do a return, and apply x to any further message. Note
+	that in (... !x+3. "y_y-2), the assignment to y will never
+	happen, since ! causes a return.'
+
+to " (CODE 9)
+	'!:". That is, get the next thing in the message stream unevalled
+	and active return it (which	causes it to be applied to the message).'
+
+to #: (:# )
+	'Returns a REFERENCE to its arguments binding.'
+
+to repeat token (:#:token. CODE 1)
+	'repeat (token eval) Not a true apply to eval, and therefore token
+	MUST be a vector.'
+
+to done x (%with?(:x. CODE 25) CODE 25)
+	'done causes a pop out of the nearest enclosing repeat, for, or do.  
+	done with val will cause the repeat to have value val'
+
+to again (CODE 6)
+	'repeat ("active_active caller. eq active. class #repeat?(done)).
+	That is, redo the most recent repeat, for, or do loop.'
+
+to if exp (:exp?(%then?(:exp. %else?(:". exp)exp)error "(no then))
+		%then?(:".   %else?(:exp) false)error "(no then))
+	'The ALGOL if ... then ... else ...'
+
+to for token step stop var start exp (
+	:"var. (%_?(:start.)"start_1).
+	(%to?(:stop.)"stop_start.)
+	(%by?(:step.)"step_1.)
+	%do. :#exp. CODE 24)
+	'An Algol-like for.
+	Note the default values if _,to,by,etc., are omitted.
+	CODE 24 means  --repeat(exp eval).	This implies done and again
+	will work, which is correct.'
+
+to do token step stop var start exp (
+	"step_"start_1. :stop. :#exp. CODE 24)
+to _cls :#:definition (%to definition)
+
+to PUT x y z (:#x. :y. :z. CODE 12)
+	'The first argument MUST be an atom which is bound to a class
+	table.  The third argument is installed in the value side of that table
+	corresponding to the name (atom) which was the second argument.'  
+
+to GET x y (:#x. :y. CODE 28)
+	'If x is a class table then the binding of the atom in y will be
+	fetched.'
+
+
+to falseclass (CODE 11
+	'%?? (:".)
+	%or? (!:)
+	%and? (:.)
+	%<? (:.)
+	%=? (:.)
+	%>? (:.)'
+
+	isnew.
+	%is?(%false?(!true) %~? (!"false) :".)
+	%print?("false print) )
+
+to vector x y : : substr (CODE 3 ?(!substr SELF x GLOB MESS)
+	'isnew?(Allocate vector of length :.
+		Fill vector with nils.)
+	%[?(:x. %].
+		(%_?(:y. !y -- store y into xth element. )
+		!  xth element) )
+	%length?(! length of string or vector)
+	%eval?("pc_0. repeat
+		(null SELF["pc_pc+1]?(done)
+		"val_SELF[pc] eval)
+		!val) sort of...'
+	%is?(ISIT eval)
+	%print?(disp_40. for x to SELF length
+		(disp_32. SELF[x] print). disp_41)
+	%map?(:y. for x to SELF length
+		(evapply SELF[x] to y)) )
+
+to string x y : : substr (CODE 3 ?(!substr SELF x GLOB MESS)
+
+	'isnew?(Allocate string of length :.
+		Fill string with 255s.)
+	%[?(:x. %].
+		(%_?(:y. !y -- store y into xth element. )
+		!  xth element) )
+	%length?(! length of string or vector)'
+
+	%is?(ISIT eval)
+	%print?(0 = "x _ SELF[1 to 9999] find first 39?
+		 (disp _ 39. disp _ SELF. disp _ 39)
+		 SELF[1 to x - 1] print. SELF[x+1 to SELF length] print)
+	%=?(:y is string?(SELF length=y length?(
+		for x to SELF length (SELF[x]=y[x]?() !false)) !false)
+		!false)
+	%+?(:y is string?("x_SELF[1 to SELF length+y length].
+		!x[SELF length+1 to x length]_y[1 to y length])
+		error "(string not found)) )
+
+to number x y : : nprint (CODE 4
+	'%+?(!val+:)
+	%-?(!val-:)
+	%*?(!val*:)
+	%/?(!val/:)
+	%<?(!val<:)
+	%=?(!val=:
+	%>?(!val>:)
+	%&  ?(%+?(!val OR :)
+		%-?(!val XOR :)
+		%*?(!val AND :)
+		%/?(!val LSHIFT :)))'
+
+	%is?(ISIT eval)
+	%print?(SELF>0?(nprint SELF)
+		SELF=0?(disp_48)
+		disp_21. nprint 0-SELF) )
+	'For floating point stuff see FLOAT'
+
+to disp x i (
+	%_?(:x is string?(for i to x length (disp_x[i])) CODE 23)
+	%clear?() %sub?(:x eval))
+	'Writes a character or string to the bootstrap printer.
+	Later it will redefined as a display frame.'
+
+
+to => (CODE #stex1)
+
+to cr (disp_13)
+to sp (disp_32)
+
+to ev (repeat (cr read eval disp))
+
+to USER (ev)
+'#bootstrap stop'
+
+
+to - x (:x*-1)
+	'An often used abbreviation, has to work for float as well.'
+
+to base8 i x s (:x. "s_string 7. for i to 7
+	(s[8-i] _ 48 + x &* 7. "x _ x &/ -3). !s)
+	'Returns a string containing the octal representation (unsigned) of its
+	integer argument.'
+ 
+
+"ISIT _ "(%~?(!TITLE) !TITLE=:").
+
+to nil x (#x)
+	'nil is an unbound pointer, which is used	to fill vectors and
+	tables.'
+
+to eq (CODE 15)
+	'(! : is-identical-to :) - compare 2 SMALLTALK pointers.'
+
+to null x y (:x. ! eq #x #y)
+	'Null returns true if its message is nil, otherwise false.'
+
+to mouse x (:x. CODE 35)
+	' 	x = 0-7  are a map on the mouse buttons. E.g. (4=mouse 4) comes
+	back true if the top mouse button is depressed, (1=mouse 1) comes
+	back true if bottom mouse button depressed, (7=mouse 7) comes
+	back true if all three mouse buttons depressed, etc.  Mouse 8
+	returns the x coordinate of the mouse and mouse 9 returns the y
+	coordinate.'
+to mx (!mouse 8)
+to my (!mouse 9)
+
+to core ((mem 63)-mem 62)
+	'Returns the amount of space left in your Smalltalk.'
+
+to kbd i ("i _ 0. CODE 20)
+	'Waits until a key is struck. Returns an ascii code when a key is
+	struck on the keyboard.'
+
+to dsoff (mem 272_0)
+	'Turns display off by storing 0 in display control block ptr. Speeds
+	up Alto Smalltalk by factor of 2.'
+
+to dson (mem 272 _ 58)
+	'Turns display back on by refreshing display control block
+	pointer.'
+
+to apply x y  (:#x. %to?(:y. %in?(:GLOB. CODE 10) CODE 10)
+		%in?(:GLOB. CODE 10) CODE 10)
+to evapply x y (:x. %to?(:y. %in?(:GLOB. CODE 10) CODE 10)
+		%in?(:GLOB. CODE 10) CODE 10)
+	'Causes its argument to be applied to the message stream of the
+	caller, or, in the case of apply foo to <vector>, to that vector.	
+	Note that only the message is changed, and that the caller is not
+	bypassed in any global symbol lookup unless the in-clause is used to
+	specify another context.'
+
+"true_"true
+"eval_"eval
+to is ( %~?(!"untyped):". !false)
+	'These are used to handle messages to classes which can|t answer
+	queston invoking is, eval, etc.'
+
+to substr op byte s lb ub s2 lb2 ub2 (
+	:#s. :lb. :ub. :MESS. "GLOB_ub.  'tee hee'
+	:ub. (%]?() error "(missing right bracket))
+	"byte _ "lb2 _ "ub2 _ 1.
+	%find? ("op _ (%first?(1) %last?(2) 1)
+				+ (%non?(2) 0). :byte. CODE 40)
+	%_?  (%all? (:byte. "op_0. CODE 40)
+		:#s2. "op_5.
+		%[? (:lb2. %to. :ub2. %].  CODE 40)
+			"ub2_9999. CODE 40)
+	"op _ 6.  CODE 40).
+PUT string "substr #substr.
+PUT vector "substr #substr.
+done  'end of subevaluation in t'
+
+	'substr takes care of copying, moving and searching within strings
+	and vectors.  It first gets its father (string/vector) and the lower
+	bound, and then proceeds to fetch the rest of the message from
+	above.  Some examples:
+		"(a b c d e)[2 to 3] -> (b c)
+		"(a b c d e)[1 to 5] find "c  -> 3
+		"(a b c d e)[1 to 5] find "x  -> 0
+	See vecmod for more examples.  String syntax is identical.'
+ 
+to vecmod new end old posn ndel nins ins ("end_10000.
+	:old. :posn. :ndel. :ins.
+	"nins_(ins is vector?(ins length) 1).
+	"new _ old[1 to old length+nins-ndel].
+	(ins is vector?(new[posn to end] _ ins[1 to nins]) new[posn]_ins).
+	new[posn+nins to end] _ old[posn+ndel to end].
+	!new)
+	'Vecmod makes a copy of old vector with ndel elements deleted
+	beginning at posn.  If ins is a vector, its elements are inserted	at
+	the same place. It is the heart of edit.'
+
+to addto func v w (:#func. :w. "v_GET func "DO. null v?(error "(no code))
+	PUT func "DO vecmod v v length 0 w)
+	'Addto appends code to a class definition.'
+
+to turtle var : pen ink width dir xor x y disp : f (
+	CODE 21  '%go?(draw a line of length :)
+	          %turn?(turn right : (degrees))
+	          %goto?(draw a line to :(x), :(y))'
+	%pendn?("pen _ 1. !SELF)
+	%penup?("pen _ 0. !SELF)
+	%ink?(%_. :ink.  !SELF)
+	%width?(%_. :width.  !SELF)
+	%xor?("xor _ (%off?(0) 1). !SELF)
+	%is?(ISIT eval)
+	%home?("x _ disp # frmwd/2.
+	       "y _ disp # frmht/2.
+	       "xf _ "yf _ 0. "dir_270. !SELF)
+	%erase?(disp fclear. !SELF)
+	%up?("dir _ 270. !SELF)
+	isnew?("ink _ "black. "pen _ "width _ 1. "xor _ 0.
+		(%disp?("disp _ :) "sisp _ f)
+		%at?(:x. :y. "dir_270)
+		SELF home)
+	)
+'TEXT DISPLAY ROUTINES
+
+Display frames are declared with five parameters. They are a left x, a width, a top y, a height, and a string.  Hence --
+	"yourframe_dispframe 16 256 16 256 string 400.
+-- gets you an area on the upper left portion of the display that starts at x,y 16,16 and is 256 bits(raster units) wide and 256 bits high. The string (buf) serves as the text buffer, and is altered by _ and scrolling.
+
+There are actually two entities associated with display frames--frames and windows. Currently both are given the same dimensions upon declaration (see isnew).  
+
+The four instance variables defining the window are winx, winwd, winy, and winht.  The boundaries of this rectangle are intersected with the physical display.  The window actually used by the machine language will reduce the size of the window, if necessary, to be confined by the physical display.  Clipping and scrolling are done on the basis of window boundaries.  If a character is in the window it will be displayed.  If a string or character cause overflow of the bottom of the window, scrolling will occur.
+
+The four instance variables defining the frame are frmx, frmwd, frmy, and frmht.   This rectangle may be smaller or larger than its associated window as well as the physical display.   Frame boundaries are the basis for word-wraparound.  (Presently, if frmy+ frmht will cause overflow of the window bottom[winx+winht], frmht will get changed to a height consonant with the bottom of the window.  This has been done to manage scrolling, but may get changed as we get a better handle on the meaning of frames and windows.).
+
+Buf is the string buffer associated with any given instance of dispframe.  This is the string that is picked on the way to microcode scan conversion.  When scrolling occurs, the first line of characters, according to frame boundaries, is stripped out and the remainder of the buffer mapped back into itself.  If a _ message would overflow this buffer, then scrolling will occur until the input fits.  
+
+Last is a buf subscript, pointing to the current last character in the buffer.  That is, the last character resulting from a _.
+
+Lstln also points into the buffer at the character that begins the last line of text in the frame.  It is a starting point for scan conversion in the _ call.
+
+Mark  is set by dread (see below) and points to the character in the buffer which represents the last prompt output by SMALLTALK; reading begins there. Mark is updated by scrolling, so that it tracks the characters.  One could detect scrolling by watching mark.
+
+Charx and chary  reflect right x and top y of the character pointed to by last.
+
+The reply variable in the instance may be helpful in controlling things.  When the reply is 0, it means everything should be OK. That is, there was intersection between the window and display and intersection between the window and the frame. When reply is 1, there was no intersection between the window and the display. A 2 reply means no intersection between window and frame. A 3 reply means window height less than font height -- hence no room for scan conversion of even one line of text. A 4 means that the frame height has been increased in order to accomodate the input. A 5 means the bottom of the window (i.e. window x + window height) has been overflowed --hence that scrolling took place. A 6 means that both 4 and 5 are true.
+
+justify is a toggle for right justifying the  contents of a dispframe.  The default is  0 and means no justification.  Setting it to 1 causes justification on frame boundaries.
+
+The font variable allows for the association of a font other than the default font with the display frame.  To get a different font into core say "something _ file <fontfilename> intostring. Then you can say disp ("font_something) or you can declare the font at the same time as the tdispframe is declared as e.g.
+ "yourframe _ dispframe 3 40 3 40 string 20 font something.'  
+
+
+to dispframe input : winx winwd winy winht frmx frmwd frmy frmht last mark lstln charx chary reply justify buf font editor : sub frame dread reread defont (
+% _ ?(0 CODE 51)
+	':s. s is number ? (append this ascii char)
+		s is string ?(append string)
+		error.'
+
+%?(!  eval)
+	'Allows access to instance variables. For example, 
+		yourframe ("winx_32) 
+	will alter the value of window x in the instance of dispframe
+	called "yourframe".'
+
+%show?(4 CODE 51 3 CODE 51)
+
+%display?(SELF show. frame black)
+	'Show clears the intersection of window and frame (see fclear,
+	below) and displays buf from the beginning through last. A handy
+	way to clean up a cluttered world.'
+
+%hasmouse?(frmx<mx<frmx+frmwd?(!frmy<my<frmy+frmht)!false)
+	'Tells you if the mouse is within a frame.'
+
+%fclear?(4 CODE 51)
+	'Fclear clears the intersection of the window and frame. Hence if
+	the frame is defined as smaller than the window, only the frame
+	area will be cleared.  If the frame is defined as larger than the
+	window, only the window area will be cleared, since that space
+	is in fact your window on that frame.'
+
+%put?(:input. %at. "winx_"frmx_:. "winy_"frmy_"chary_:.
+	"last_0. "lstln_1. SELF_input. !charx-winx)
+	'For them as would rather do it themselves.'
+
+%wclear?(5 CODE 51)
+	'Wclear clears the intersection of a window and the physical
+	display.'
+
+%scroll?(2 CODE 51)
+	'Scroll removes the top line of text from the frame|s string buffer,
+	and moves the text up one line.'
+
+%clear?(1 CODE 51)
+	'Clear does an fclear and sets the last pointer into the string buffer
+	to 0 and lstln to 1. It has the effect of cleaning out the string
+	buffer as well as clearing the frame area.'
+
+%mfindc ?(7 CODE 51)
+	' 	Find character.
+	Takes two arguments -- x and y (typically msex and msey).
+	Returns vector:
+		vec[1] = subscript of char in string
+		vec[2] = left x of char
+		vec[3] = width of char
+		vec[4] = topy of char
+	If vec[1] is -1 x,y is after the end of the string.
+	If vec[2] is -2 x,y is not in the window.
+	Sample call:
+		"myvec_yourframe mfindc mx my.'
+
+%mfindw ?(8 CODE 51)
+	' 	Find word.
+	Takes two arguments -- x and y (typically msex and msey).
+	Returns vector:
+		vec[1] = subscript of first char in word
+		vec[2] = left x of word
+		vec[3] = width of word
+		vec[4] = topy of word
+	If vec[1] is -1 x,y is after the end of the string.
+	If vec[2] is -2 x,y is not in the window.
+	Sample call:
+		"myvec_yourframe mfindw mx my.'
+
+%mfindt ?(6 CODE 51)
+	' 	Find token.
+	Takes two arguments -- x and y (typically msex and msey).
+	Returns vector:
+		vec[1] = token count, ala Smalltalk token Spaces and
+			carriage returns are  considered as delimiters,but
+			multiple delimiters do not bump the count. Text
+			delimited by single quotes is counted as one
+			token, and embedded text (i.e. more than one
+			quote in sequence will not cause the token count
+			to be bumped (allows for embedding strings
+			within strings).
+		vec[2] = left x of word
+		vec[3] = width of word
+		vec[4] = topy of word
+
+	If vec[1] is -1 x,y is after the end of the string or not in frame.
+	If vec[2] is -2 x,y is not in the window.
+	A sample call--
+		"variable_yourframe mfindt mx my.'
+
+%read?(!dread)
+	'Makes a code vector out of keyboard input. See dread below.'
+
+%reread?(!reread :)
+	'Used by redo and fix.  Goes back n(its argument), prompts and does
+	a read from there. See reread below.'
+
+%sub?("input _ sub :. SELF show. !input)
+	'Evals its argument in a sub-window.  Used by fix and shift-esc.
+	 See sub below.'
+
+%knows?(ev)
+	'Whilst at the KEYBOARD, one can say 
+		yourframe knows(DOIT)
+	and get a copy of the evaluator in the context of that instance of
+	dispframe.  Allows access to instance variables without going through
+	the  path.'
+
+%frame ? (apply frame)
+	'Draws a border of the given color around the frame.  E.g., 
+		yourframe frame - 1.'
+
+%is ?(ISIT eval)
+
+isnew ? ("winx_:frmx. "winwd_:frmwd. "chary_"winy_:frmy.
+	"winht_:frmht. :buf. "lstln_1.
+	"mark_"last_"charx_"reply_"justify_0.
+	"font _ (%font?(:input is string?(input) defont)defont)
+	%noframe?() frame black)  ))
+ 
+dispframe knows
+to dread t instr prev (
+	disp_20. "instr_false. "mark_last.
+	(null #DRIBBLE?() DRIBBLE flush)
+	repeat ("prev _ buf[last].
+		40>disp_"t_kbd?(
+		t=8?(last<mark?(disp_20) 
+		'	Backspace only up to prompt.'
+			prev=39?("instr_instr is false))
+			'		Backspace out of string flips instr.'
+		t=30?(instr?() done)  
+		'	DOIT checks if in a string.'
+		t=39?("instr_instr is false)
+		'	Flag is true if in a string'
+		t=5?(sub "(ev). "last_last - 1. disp show)
+		'	Shift-Esc make sub-eval.'
+		t=4?(disp_8. "done print. disp_30. !"(done))
+		))
+	disp_13. !read of buf [mark+1 to last - 2])
+
+to sub disp (
+	"disp_dispframe winx+48 winwd - 64 winy+14 winht - 28
+			string 300 font font. 
+	disp clear. (:)eval)
+	'Opens a sub-frame, and evals its argument in that context.'
+
+to frame a ("a _ turtle at frmx - 1 frmy - 1.
+	a width 2 . a ink (%white?("white) %black. "black).
+	do 2 (a turn 90 go frmwd + 2 turn 90 go frmht + 2)	)
+	'Draws a double line around the frame.'
+
+
+to reread n i p reader ((null :n?("n_1))
+	repeat (buf[last] = 20?(disp _ 8. done) disp _ 8).
+	"p _ last.
+	for i to n
+		("p_buf[1 to p - 1] find last 20.
+		p<1?(done))
+	i<n?(error "(no code))
+	!read of buf [p+1 to buf[p+1 to last] find 30])
+	'Counts back n prompts (n is integer arg) and then does a read from
+	there. Also erases the line just typed.'
+
+"defont _ fill string 6
+ST8.AL
+
+done
+ 
+to read str ((%of?(:str)). CODE 2)
+	'Adds the ability to read from a supplied string'
+
+to dclear (0 CODE 52)
+	'This function takes five parameters -- 
+	x width y height value, and clears the display rectangle thus
+	defined to the value given. A 0 value, for example, puts all
+	zeros into  the rectangle.'
+
+
+to dcomp (1 CODE 52)
+	'Just like dclear only complement rectangle.'
+
+
+to dmove (2 CODE 52)
+	'This function takes six parameters -- source x width source y
+	height destination x destination y.  It takes the source rectangle
+	(x and width mod 16|d as in dclear) and moves it to the destination
+	x and y. Clipping will occur on display boundaries. The source will
+	remain intact unless  it overlaps with the destination, in which case
+	the over- lapping portion of the destination wins.'
+
+to dmovec (3CODE 52)
+	'Dmovec takes the same parameters as dmove, but in addition clears
+	the non-intersecting source material. It is the general case of what
+	happens on the display screen during a scroll, i.e. scrolling could be
+	accomplished by saying disp (dmovec winx winwd winy+fontheight
+	winht-fontheight winx winy). A sample call --
+		dmovec 0 256 0 256 256 256. 
+	This will move whatever is in the upper left hand corner of the
+	display to x,y   256,256 -- and then erase the source area. '
+
+ 
+to redo (!(disp reread :) eval)
+	'Causes re-evaluation of the input typed n prompts before this.
+	Setting last_mark-2 makes the redo statement and its prompt
+	disappear with a disp show.'
+
+to fix vec ("vec_disp reread :.
+	(disp sub "(veced vec)) eval)
+	'Like redo, except that the previous input is given to the editor in a
+	subwindow.  When editing is done, the resulting code is evalled
+	before returning.'

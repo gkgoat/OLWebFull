@@ -1,0 +1,1 @@
+export default new Proxy({"en-us": {}},{get: (o,k) => new Proxy(o[k] || o['en-us'],{get: (no,nk) => no[nk] || o['en-us'][nk]})})

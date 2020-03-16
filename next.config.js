@@ -8,6 +8,12 @@ module.exports = {
         test: /\.worker\.js$/,
         use: { loader: 'worker-loader',options: {inline: true,fallback: false} }
       });
+      config.module.rules.push(      {
+        test: /\.tsx?$/,
+        use: ['ts-loader',{        loader: 'babel-loader',
+        options: {presets: ["next/babel"]},}],
+        exclude: /node_modules/,
+      });
       config.plugins.push(esm('./src/wp/plugin.js').default)
       return config
     },

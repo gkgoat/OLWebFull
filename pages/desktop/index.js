@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import * as ReactZ from 'react'
 import root from 'react-shadow';
 import Window_ from '../../src/Window.js'
 import Iframe_ from '../../src/Iframe.js'
@@ -14,6 +15,9 @@ import { create } from "react-test-renderer";
 import MainWorker from '../../src/main.worker.js'
 import * as ExtensionLib from '../../ol-ex/lib.js'
 import BrowserWrapper from '../../src/browser_loader.js'
+import Prezi from '../prezi.js'
+import cw from '../../src/cw.js'
+import useEventListener from '../../src/handler.js'
 let DefaultDOMCanvas = props => (<canvas {...props} ref = {props.onCanvas}></canvas>)
 export default class Desktop extends React.Component{
     constructor(props = {}){
@@ -97,15 +101,17 @@ isBrowser = true;
     let MyMutationObserver = this.props.Observer || (this.state.d_a && this.state.d_a.MutationObserver) || (props => props.children);
     MyMutationObserver = (Old => props => Old && (<Old {...props} subtree = {true}>{props.children}</Old>))(MyMutationObserver);
     MyMutationObserver = MyMutationObserver || (props => props.children);
-    let lib = {div: Div,Window,Iframe,MutationObserver: MyMutationObserver,DOMInterop: {DOMCanvas}};
+    let lib = {div: Div,Window,Iframe,MutationObserver: MyMutationObserver,useEventListener,DOMInterop: {DOMCanvas},cw,desk: {getDeskProps: () => this.props}};
     let windows = (this.props.windows || [])
     .concat(this.props.div === null ? [{id: 'welcome',render: (React) => {return (<MainWelcomePage></MainWelcomePage>)}}] : [])
     .concat(discord ? [{id: 'discord',render: (React,lib) => {let theDiscord = Discord(React,useState);return (<lib.Div><theDiscord lib = {lib} discord = {discord}></theDiscord></lib.Div>)}}] : [])
     .concat(isBrowser  && Desktop3D ? [{id: 'three',render: rct => (<Desktop3D dcls = {Desktop} linkParent = {this}></Desktop3D>)}] : [])
+    .concat(isBrowser ? [{id: 'prezi',render: rct => Prezi.w(<div><Prezi noDesktop = {true}></Prezi></div>)}] : [])
     .concat(Iframe.canRenderHTML ? [{id: 'langs',render: r => (<Iframe.html src = {(() => {try{return location.hostname + '/lang/' + lang}catch(err){return ''}})()} windowRef = {win => {ExtensionLib.dr(win.document.querySelector('#firstHeading'))}}></Iframe.html>)}] : [])
+    .concat(this.constructor.wins.map(w => w(this,lib)))
     .concat([])
     .concat(this.state.windows)
-    let rw = w => (<MyMutationObserver key = {w.id}><Window><MyMutationObserver>{w.render(React,lib,this.state.appDataMap.get(w.id),(v) => {this.setState({appDataMap: new Map(this.state.appDataMap).set(w.id,v)})})}</MyMutationObserver></Window></MyMutationObserver>);
+    let rw = w => (<MyMutationObserver key = {w.id}><Window><MyMutationObserver>{w.render(Object.assign({},React,ReactZ),lib,this.state.appDataMap.get(w.id),(v) => {this.setState({appDataMap: new Map(this.state.appDataMap).set(w.id,v)})})}</MyMutationObserver></Window></MyMutationObserver>);
     if(this.props.w)wrap = R.pipe(wrap,this.props.w.bind(null,lib));
     if(this.state.usesSingleWindow)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div>{this.state.currentWindow ? rw(this.state.currentWindow) : this.props.children}</Div></MyMutationObserver>));
 if(this.props.isWatch)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div><this.props.Watch><MyMutationObserver>{e.props.children[0].props.children[0].props.children}</MyMutationObserver></this.props.Watch></Div></MyMutationObserver>));
@@ -121,3 +127,4 @@ if(this.props.connextToEx)wrap = R.pipe(wrap,e => this.props.ex ? (() => {this.s
     </Div></MyMutationObserver>)
 }
 }
+Object.assign(Desktop,{wins: []})

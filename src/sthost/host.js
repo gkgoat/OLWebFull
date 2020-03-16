@@ -1,13 +1,17 @@
 import blobbiEvents from '../blobbi/text_model.js'
 import * as R from 'ramda'
 import saf from '../saf.js'
-export default () => import('../../../SqueakJS/squeak.js').then(() => ({runHost: async function(){
-    self.SqueakJS.runImage(URL.createObjectURL(new Blob(await import('raw-loader!../../../data/host.image')))); 
+export default () => import('../../../SqueakJS/squeak.js').then(() => ({
+    newNodeCanvas: () => import('jsdom').then(m => new m.JSDOM('<canvas></canvas')).then(d => d.window.document.body.querySelector('canvas')),
+    runHost: async function(c){
+    self.SqueakJS.runImage(URL.createObjectURL(new Blob(await import('raw-loader!../../../data/host.image'))),c); 
     let vm = await this.onVM();
     let push = R.tap(vm.push.bind(vm));
     while(push(vm.pop()).stl === undefined)await saf(); 
     let stl = vm.primHandler.js_fromStBlock(push(vm.pop()).stl);
-    blobbiEvents.on('tell squeak',async arg => {})},onVM: () => new Promise(c => {let sjs = Object.getOwnPropertyDescriptor(self.SqueakJS,'vm');Object.defineProperty(self.SqueakJS,'vm',{get: () => null,set: v => {
+    blobbiEvents.on('tell squeak',async arg => {});
+    return vm;
+},onVM: () => new Promise(c => {let sjs = Object.getOwnPropertyDescriptor(self.SqueakJS,'vm');Object.defineProperty(self.SqueakJS,'vm',{get: () => null,set: v => {
         function run() {
             try {
                 if (v.display.quitFlag) self.onQuit(v, v.display, options);
