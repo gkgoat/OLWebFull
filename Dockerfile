@@ -5,5 +5,7 @@ COPY . /app
 COPY ../re-boot /re-boot
 
 WORKDIR /app
-RUN sh -c "npm run dev &"
+EXPOSE 3000
+
+RUN sh -c "npm run serve &"
 

@@ -6,4 +6,7 @@ services:
             - "3000:3000"
     db:
         image: mysql
-            
+    docker:
+        build: ./src/dk 
+        ports:
+            - "2501:2501"
