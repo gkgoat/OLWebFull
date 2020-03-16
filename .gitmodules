@@ -1,0 +1,9 @@
+[submodule "src/l10n.js"]
+	path = src/l10n.js
+	url = https://github.com/eligrey/l10n.js
+[submodule "src/kindergarten"]
+	path = src/kindergarten
+	url = https://github.com/JiriChara/kindergarten.git
+[submodule "src/clui"]
+	path = src/clui
+	url = https://github.com/replit/clui.git
