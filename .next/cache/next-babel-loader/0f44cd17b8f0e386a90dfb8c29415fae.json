@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default (function (props) {\n  return props.render(props);\n});","map":{"version":3,"sources":["/home/graham/st/OLWebFull/src/cw.js"],"names":["props","render"],"mappings":"AAAA,gBAAe,UAAAA,KAAK;AAAA,SAAIA,KAAK,CAACC,MAAN,CAAaD,KAAb,CAAJ;AAAA,CAApB","sourcesContent":["export default props => props.render(props)"]},"metadata":{},"sourceType":"module"}

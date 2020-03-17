@@ -4,6 +4,27 @@ import '@webcomponents/custom-elements/custom-elements.min.js'
 import * as wc from '../src/wc.js'
 async function init(){
 let b = await browser();
+let stp;
+let React;
+if(location.hash.beginsWith('st')){
+stp = (async () => {
+React = await import('react');
+let ReactDOM = await import('react-dom');
+React = Object.assign({},React,React.default,ReactDOM);
+let Window = (await import('../src/Window.js')).default;
+let d;
+document.body.appendChild(d = document.createElement('div'));
+React.render(<div>
+<Window>
+
+    
+</Window>
+
+</div>,d)
+})();
+
+
+}
 let canvases = document.querySelectorAll('canvas');
 let onC;
 let mh;

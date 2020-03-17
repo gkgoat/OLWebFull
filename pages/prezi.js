@@ -4,7 +4,7 @@ import Reveal from 'reveal'
 import bindThis from '../src/bind_this.js'
 import Index from './index.js'
 import Iframe from '../src/Iframe.js'
-export default Object.extend(props => {
+export default Object.assign(props => {
     useEffect(Reveal.initialize.bind(Reveal));
     return (<>
     <section>Welcome to Smalltalk!</section>

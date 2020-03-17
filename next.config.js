@@ -14,7 +14,7 @@ module.exports = {
         options: {presets: ["next/babel"]},}],
         exclude: /node_modules/,
       });
-      config.plugins.push(esm('./src/wp/plugin.js').default)
+      config.plugins.push(new (esm('./src/wp/plugin.js').default)(c => c))
       return config
     },
     webpackDevMiddleware: config => {

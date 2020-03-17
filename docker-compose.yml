@@ -4,9 +4,21 @@ services:
         build: .
         ports: 
             - "3000:3000"
+        env_file:
+            - ./x11.env
+        volumes:
+            - ./src:/app/src
     db:
         image: mysql
     docker:
         build: ./src/dk 
         ports:
             - "2501:2501"
+        volumes:
+            - .:/etc/st/host_folder:ro 
+    nodeRed:
+        image: nodered/node-red:latest
+        volumes:
+            - ./src:/st/app/src
+        ports:
+            - "1880:1880"
