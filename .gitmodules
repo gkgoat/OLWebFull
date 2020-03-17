@@ -7,3 +7,6 @@
 [submodule "src/clui"]
 	path = src/clui
 	url = https://github.com/replit/clui.git
+[submodule "src/open-iconic"]
+	path = src/open-iconic
+	url = https://github.com/iconic/open-iconic.git
