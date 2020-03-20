@@ -10,3 +10,6 @@
 [submodule "src/open-iconic"]
 	path = src/open-iconic
 	url = https://github.com/iconic/open-iconic.git
+[submodule "src/vx/jemul8"]
+	path = src/vx/jemul8
+	url = https://github.com/asmblah/jemul8.git
