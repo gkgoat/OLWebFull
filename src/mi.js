@@ -1,0 +1,1 @@
+export default (...classes) => new Proxy({prototype: new Proxy({},{get: (o,k) => o[k] || classes.reduce((v,cls) => v || (cls.prototype[k]))})},{get: (o,k) => o[k] || (classes.reduce((v,cls) => v || (cls[k])))})

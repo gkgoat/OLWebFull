@@ -19,5 +19,8 @@
   "devDependencies": {
     "webpack": "^4.42.0",
     "yargs": "^15.3.0"
+  },
+  "dependencies": {
+    "ws": "^7.2.3"
   }
 }

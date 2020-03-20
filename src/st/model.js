@@ -1,6 +1,7 @@
 import * as reboot from '../../../re-boot/dist/index'
 import * as R from 'ramda'
 import poolp from '../poolp.js'
+let rpoolp = f => arg => rpoolp(poolp(f(arg)));
 export let StObject = reboot.Y(withClass => clas => reboot.Y(withFields => fields => reboot.Y(self => f => 
     reboot.COND(reboot.EQ(f)(reboot.ZERO))
     (m => withFields(reboot.PUT(fields)(m(reboot.CAR))(m(reboot.CDR))))
@@ -60,7 +61,9 @@ export let StVM = reboot.Y(withDriver => driver => reboot.Y(withObjects => objec
     ))))
 export let StToHandler = car => cdr => vm => vect => st_vector => StVector(StObject(FALSE)(FALSE))(reboot.REDUCE(acc => x => (c => reboot.CONS(c(x => acc(reboot.CAR))(acc(reboot.CAR)(reboot.ZERO)(FALSE)))(reboot.Y(res => v => c(y => CONS(x)(acc(reboot.CDR)))(y => CONS(acc(reboot.CAR)(reboot.ZERO)(FALSE)(reboot.ADD(reboot.THREE)(reboot.THREE))(FALSE))(acc(reboot.CDR) ))(st_vector))(cdr)))(reboot.COND(reboot.EQ(x(reboot.CAR)(x => x))(reboot.SUB(reboot.MULTIPLY(reboot.MULTIPLY(reboot.THREE)(reboot.TWO))(reboot.ADD(reboot.THREE)(reboot.TWO)))(reboot.TWO))))))(reboot.ONE)
 
-export let StCodeHandler = car => cdr => vm => vect => (codes => reboot.AT(codes)(reboot.AT(vect(reboot.ZERO)(reboot.ADD1(reboot.THREE))(reboot.ONE)))(cdr(reboot.CDR)(reboot.CAR))(cdr(reboot.CDR)(reboot.CDR))(vm)(vect(reboot.ZERO)))(reboot.CONS(StToHandler))
+export let StExternal = car => cdr => vm => vect => poolp(external => external(vm)(vect)(R.construct(Promise))(m => o => k => reboot.COND(reboot.EQ(n)(reboot.ZERO))(o[k])(reboot.COND(reboot.EQ(n)(reboot.ONE))(v => Object.assign(Object.create(o.__proto__),o,{[k]: v}))(reboot.FALSE))))
+
+export let StCodeHandler = car => cdr => vm => vect => (codes => reboot.AT(reboot.MAP(rpoolp)(codes))(reboot.AT(vect(reboot.ZERO)(reboot.ADD1(reboot.THREE))(reboot.ONE)))(cdr(reboot.CDR)(reboot.CAR))(cdr(reboot.CDR)(reboot.CDR))(vm)(vect(reboot.ZERO)))(reboot.CONS(StToHandler)(reboot.CONS(StExternal)(FALSE)))
 
 export let StCPU = reboot.Y(withVM => vm => reboot.Y(self => f => 
     reboot.COND(reboot.EQ(f)(reboot.ZERO))

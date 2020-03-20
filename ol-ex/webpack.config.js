@@ -16,6 +16,10 @@ module.exports = {
   },
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
+    alias: {
+      fs: './fs.polyfill.js'
+
+    }
   },
   output: {
     filename: '[name].js',

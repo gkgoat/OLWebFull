@@ -1,35 +1,33 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Draggable from 'react-draggable';
 import {Container, Row, Col} from 'react-bootstrap'
 import { Manager, Reference, Popper } from 'react-popper';
 import * as R from 'ramda'
 import XSvg from 'raw-loader!./open-iconic/svg/x.svg'
-export default class Window extends React.Component{
-render(){return (<Draggable handle = {"span._titlebar"}>
+export default function Window(props){let [isMaximized, setIsMaximized] = useState(false);return (<div style = {{width: isMaximized && '100%',height: isMaximized && '100%'}}><Draggable handle = {"span._titlebar"}>
     <Container>
         <Row>
             <Col>
             <Manager>
                 <Reference>
-                    {({ref}) => (                <span style = {{height: this.props.titleHeight || '12px'}} className = {'_titlebar'}>{this.props.noClose ? (<></>) : (<span onClick = {this.props.onClose}><svg dangerouslySetInnerHTML = {{__html: XSvg}}></svg></span>)}
-                    {this.props.titlebar && this.props.titlebar()}
-                <span ref = {ref}>{'_______'}</span>
+                    {({ref}) => (                <span st-locked = {true} style = {{height: props.titleHeight || '12px'}} className = {'_titlebar'}>{props.noClose ? (<></>) : (<span onClick = {props.onClose}><svg dangerouslySetInnerHTML = {{__html: XSvg}}></svg></span>)}
+                    {props.titlebar && props.titlebar()}
+                <span st-locked = {true} ref = {ref}>{'_______'}</span>
                 </span>)}
                 </Reference>
                 <Popper>
 {({ ref, style, placement, arrowProps }) => (<div ref = {ref} style = {style} data-placement = {placement}>
-{this.props.noPopper ? (<></>) : (<Window noPopper={true} noClose = {true} titlebar = {R.pipe(this.props.titlebar || (() => {return <span></span>}),t => (<span>{t}Help</span>))}>
+{props.noPopper ? (<></>) : (<Window noPopper={true} noClose = {true} titlebar = {R.pipe(props.titlebar || (() => {return <span></span>}),t => (<span>{t}Help</span>))}>
 Drags Window
     
 </Window>)}
-    <div ref={arrowProps.ref} style={arrowProps.style} />
+    <div ref={arrowProps.ref} style={arrowProps.style} st-locked = {true}/>
 </div>)}
 
                 </Popper>
             </Manager>
             </Col></Row>
-            <Row><Col>{this.props.children}</Col></Row>
+            <Row><Col>{props.children}</Col></Row>
             </Container>
-        </Draggable>)}
-
-}
+        </Draggable>
+        </div>)}
