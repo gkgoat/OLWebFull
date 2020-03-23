@@ -1,0 +1,23 @@
+{
+  "name": "st-snakes",
+  "version": "1.0.0",
+  "description": "Snakes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmalltalkLand/OLWebFull.git"
+  },
+  "keywords": [
+    "python",
+    "nodejs"
+  ],
+  "author": "Graham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmalltalkLand/OLWebFull/issues"
+  },
+  "homepage": "https://github.com/SmalltalkLand/OLWebFull#readme"
+}

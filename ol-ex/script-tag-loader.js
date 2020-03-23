@@ -1,0 +1,1 @@
+module.exports = c => (`var script = document.createElement('script'); script.innerText = '${c.replace('\\','\\\\').replace("'","\\'")}'; document.body.appendChild(script); export default script`)

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, lazy, useRef} from 'react'
 import * as ReactZ from 'react'
 import {Tabs, Tab} from 'react-bootstrap'
 import root from 'react-shadow';
@@ -18,6 +18,9 @@ import Prezi from '../prezi.js'
 import cw from '../../src/cw.js'
 import useEventListener from '../../src/handler.js'
 import Inspector_ from '../../src/Inspector.js'
+import CW from '../../src/cw.js'
+import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
+import RawMenuSVG from 'raw-loader!../../src/open-iconic/svg/menu.svg'
 class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
@@ -38,6 +41,7 @@ let ExtensionLib;
 import('../../ol-ex/lib.js').then(v => ExtensionLib = v).catch(err => {});
 export default class Desktop extends React.Component{
     get document(){try{return document}catch(err){return null}}
+    async openCollide(){let Collide = await import('../src/collide/renderer/components/App.jsx').default;this.addWindow({id: 'collide',render: (_,lib) => (<Collide winCreator = {lib.rw}></Collide>)})}
     constructor(props = {}){
 super(props);
 this.state = {usesSingleWindow: false,currentWindow: undefined,objectTagSheet: {},HotTable: null,appDataMap: new Map(),windows: [],d_a: undefined,javaPackage: undefined,jlink: undefined,ex: undefined};
@@ -88,6 +92,8 @@ return (<Window><Div></Div></Window>)
 
     }
     get discord(){return this.props.discord || (DiscordPolyfill(this))}
+    static get ex(){let self = this;return (<self w = {(lib,element,{desktop}) => {return (<CW render = {() => {}}></CW>)}}></self>)}
+    static NewWindowManager(wm){let self = this;let lr = lazy(R.pipe(wm.render,Promise.resolve.bind(Promise)));return (props) => (<self w = {(lib,element,{desktop}) => {return (<CW render = {() => {return lr([desktop,lib])}}></CW>)}}></self>)}
 render(){
     let document = this.document;
     let wrap = R.identity;
@@ -112,10 +118,12 @@ isBrowser = true;
     let Window = this.props.Window || Window_;
     let Iframe = this.props.Iframe || Iframe_;
     let DOMCanvas = this.props.Canvas || DefaultDOMCanvas;
+    let Image = this.props.Image || 'svg';
     let MyMutationObserver = this.props.Observer || /*(this.state.d_a && this.state.d_a.MutationObserver) || */(props => props.children);
+    let Menus = {Trigger: this.props.MenuTrigger || ContextMenuTrigger,Menu: this.props.MenuObj || ContextMenu, Item: this.props.MenuItem || MenuItem};
     if(!document)MyMutationObserver = props => props.children;
     MyMutationObserver = MyMutationObserver || (props => props.children);
-    let lib = {List,div: Div,Div,Window,Iframe,MutationObserver: MyMutationObserver,useEventListener,DOMInterop: {DOMCanvas},cw,desk: {getDeskProps: () => this.props},TextArea: isBrowser || document ? 'textarea': null,Tabs: isBrowser || document ? {Tabs, Tab} : null};
+    let lib = {List,Menus,div: Div,Div,Window,Iframe,MutationObserver: MyMutationObserver,useEventListener,DOMInterop: {DOMCanvas},cw,desk: {getDeskProps: () => this.props},TextArea: isBrowser || document ? 'textarea': null,Tabs: isBrowser || document ? {Tabs, Tab} : null};
     let windows = (this.props.windows || [])
     .concat(this.props.div === null ? [{id: 'welcome',render: (React) => {return (<MainWelcomePage></MainWelcomePage>)}}] : [])
     .concat(discord ? [{id: 'discord',render: (React,lib) => {let theDiscord = Discord(React,useState);return (<lib.Div><theDiscord lib = {lib} discord = {discord}></theDiscord></lib.Div>)}}] : [])
@@ -126,8 +134,24 @@ isBrowser = true;
     .concat([])
     .concat(this.state.windows)
     .concat([{id: 'self',render: (React,lib) => (<Inspector lib = {lib} obj = {this}></Inspector>)}])
-    let rw = w => (<MyMutationObserver key = {w.id}><Window><MyMutationObserver>{w.render(Object.assign({},React,ReactZ),lib,this.state.appDataMap.get(w.id),(v) => {this.setState({appDataMap: new Map(this.state.appDataMap).set(w.id,v)})})}</MyMutationObserver></Window></MyMutationObserver>);
-    if(this.props.w)wrap = R.pipe(wrap,this.props.w.bind(null,lib));
+    let rw = w => (<MyMutationObserver key = {w.id}>
+        <Window onClose = {this.removeWindow.bind(this,w)} titlebar = {() => (<CW render = {() => {let r = useRef();return w.titlebar ? w.titlebar(Object.assign({},React,ReactZ),lib,{menuRef: r}) : (<Menus.Trigger  ref = {r} id = {'win-' + w.id}>
+            <Image dangerouslySetInnerHTML = {{__html: RawMenuSVG}} onClick = {evt => r.current.handleContextClick(evt)}></Image>
+
+        </Menus.Trigger>)}}></CW>)}>
+            <MyMutationObserver>
+                <Menus.Menu id = {'win-' + w.id}>
+
+
+                </Menus.Menu>
+                <CW render = {w.render.bind(null,Object.assign({},React,ReactZ),lib,this.state.appDataMap.get(w.id),(v) => {this.setState({appDataMap: new Map(this.state.appDataMap).set(w.id,v)})})}>
+                </CW>
+            </MyMutationObserver>
+        </Window>
+    </MyMutationObserver>);
+    lib.rw = rw;
+if(this.props.w)wrap = R.pipe(wrap,R.partialRight((this.props.w.Desktop || this.props.w).bind(null,lib),{desktop: this,windowManager: this}),e => (<e.type {...Object.assign({},e.props,{children: c.children.concat([<Div style = {{color: '#777777'}}>{ 'not real desktop'}</Div>])})}></e.type>));
+if(this.props.w && this.props.w.Window)rw = R.pipe(rw,this.props.w.Window );
     if(this.state.usesSingleWindow)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div>{this.state.currentWindow ? rw(this.state.currentWindow) : this.props.children}</Div></MyMutationObserver>));
 if(this.props.isWatch)wrap = R.pipe(wrap,e => (<MyMutationObserver><Div><this.props.Watch><MyMutationObserver>{e.props.children[0].props.children[0].props.children}</MyMutationObserver></this.props.Watch></Div></MyMutationObserver>));
     if(this.props.head === 'less')wrap = R.pipe(wrap,create);
@@ -142,4 +166,4 @@ if(this.props.connextToEx)wrap = R.pipe(wrap,e => this.props.ex ? (() => {this.s
     </Div></MyMutationObserver>)
 }
 }
-Object.assign(Desktop,{wins: [],wantsToBeInspectedAsReact: true})
+Object.assign(Desktop,{wins: [],wantsToBeInspectedAsReact: true})  

@@ -11,9 +11,9 @@ super();
 let s = this.attachShadow({node: 'open'});
 this.d = document.createElement('div');
 s.appendChild(this.d);
-ReactDOM.render(<div><Window {...this}><slot></slot></Window></div>,this.d)
+ReactDOM.render(<div><Window {...this} titlebar = {() => this.title}><slot></slot></Window></div>,this.d)
 
 }
-attributeChangedCallback(name,old,newV){ReactDOM.render(<div><Window {...this}><slot></slot></Window></div>,this.d)}
+attributeChangedCallback(name,old,newV){ReactDOM.render(<div><Window {...this}  titlebar = {() => this.title}><slot></slot></Window></div>,this.d)}
 static get observedAttributes(){return Object.keys(Window.propTypes)}
 }

@@ -1,4 +1,5 @@
 let esm = require('esm')(module);
+let path = require('path');
 module.exports = {
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
       // Note: we provide webpack above so you should not `require` it
@@ -14,7 +15,8 @@ module.exports = {
         options: {presets: ["next/babel"]},}],
         exclude: /node_modules/,
       });
-      config.plugins.push(new (esm('./src/wp/plugin.js').default)(c => c))
+      config.plugins.push(new (esm('./src/wp/plugin.js').default)(c => c));
+      config.resolve.alias['browsix'] = path.resolve(__dirname, 'src/browsix/')
       return config
     },
     webpackDevMiddleware: config => {

@@ -8,7 +8,11 @@ export let StObject = reboot.Y(withClass => clas => reboot.Y(withFields => field
     (reboot.COND(reboot.EQ(f)(reboot.ONE))
     (m => reboot.AT(fields)(m))
     (reboot.COND(reboot.EQ(f)(reboot.TWO))
-    (m => reboot.COND(reboot.EQ(m)(reboot.ZERO))(x => clas)(c => withClass(c)(fields)))
+    (m => 
+        reboot.COND(reboot.EQ(m)(reboot.ZERO))
+        (x => clas)
+        (c => withClass(c)(fields))
+    )
     (reboot.COND(reboot.EQ(f)(reboot.THREE))
     (o => self(reboot.ONE)(reboot.ZERO)(reboot.ONE)(o))
     (reboot.COND(reboot.EQ(f)(reboot.ADD1(reboot.THREE)))
@@ -22,14 +26,18 @@ export let StVector = reboot.Y(withBase => base => reboot.Y(withContents => cont
     (reboot.COND(reboot.EQ(f)(reboot.TWO))
     (v => base(reboot.ONE)(reboot.TWO)(v))
     (reboot.COND(reboot.EQ(f)(reboot.THREE))
-    (reboot.Y(withTable => table => m => table(reboot.CAR)(reboot.CAR)(reboot.THREE)(m)(b => reboot.COND(b)(x => withTable(table(reboot.CDR)))(x => table(reboot.CAR)(reboot.CDR))(reboot.FALSE))))
+    (reboot.Y(withTable => table => m => table(reboot.CAR)(reboot.CAR)(reboot.THREE)(m)(b => 
+        reboot.COND(b)
+        (x => withTable(table(reboot.CDR)))
+        (x => table(reboot.CAR)(reboot.CDR))(reboot.FALSE)
+        )))
     (reboot.COND(reboot.EQ(f)(reboot.ADD1(reboot.THREE)))
     (table => vm => m => poolp(self(reboot.ZERO)(FALSE)(reboot.ONE))(poolp(c => poolp(self(reboot.THREE)(table)(m(c(reboot.CAR)))(c(reboot.CDR))(vm)(self)))))
     (reboot.COND(reboot.EQ(f)(reboot.ADD(reboot.THREE)(reboot.TWO)))
     (c => withContents(c)(reboot.ONE))
     (reboot.COND(reboot.EQ(f)(reboot.ADD(reboot.THREE)(reboot.THREE)))
     (x => contents)
-    ()))))))
+    (reboot.FALSE)))))))
 ))))
 export let StVM = reboot.Y(withDriver => driver => reboot.Y(withObjects => objects => reboot.Y(withCurrentVector => currentVector => reboot.Y(self => f => 
     reboot.COND(reboot.EQ(f)(reboot.ZERO))
@@ -38,12 +46,20 @@ export let StVM = reboot.Y(withDriver => driver => reboot.Y(withObjects => objec
     (newVector => withCurrentVector(newVector))
     (reboot.COND(reboot.EQ(f)(reboot.TWO))
     (cls => fields => onObj => self(reboot.ZERO)(onObj(StObject(cls)(CONS(t => 
-        reboot.COND(reboot.EQ(t)(reboot.ONE))(o => o /*todo*/)
+        reboot.COND(reboot.EQ(t)(reboot.ONE))
+        (o => o /*todo*/)
         )(fields)))))
     (reboot.COND(reboot.EQ(f)(reboot.THREE))
     (obj => withObjects(v => obj(reboot.ONE)(reboot.ONE)(reboot.ADD1(reboot.THREE))(v)) (x => obj(reboot.ONE)(reboot.TWO)(reboot.ONE)(reboot.ONE)(x)))
     (reboot.COND(reboot.EQ(f)(reboot.ADD1(reboot.THREE)))
-    (a => b => f => reboot.COND(reboot.EQ(f)(reboot.ZERO))(reboot.ADD(a,b))(reboot.COND(reboot.EQ(f)(reboot.ONE))(reboot.MULTIPLY(a,b))(reboot.COND(reboot.EQ(f)(reboot.TWO))(x => reboot.SUB(a,b)))))
+    (a => b => f => 
+        reboot.COND(reboot.EQ(f)(reboot.ZERO))
+        (reboot.ADD(a,b))
+        (reboot.COND(reboot.EQ(f)(reboot.ONE))
+        (reboot.MULTIPLY(a,b))
+        (reboot.COND(reboot.EQ(f)(reboot.TWO))
+        (x => reboot.SUB(a,b))))
+    )
     (reboot.COND(reboot.EQ(f)(reboot.ADD1(reboot.ADD1(reboot.THREE))))(f => 
         reboot.COND(reboot.EQ(f)(reboot.ZERO))
         (m => withCurrentVector(currentVector(reboot.ADD1(reboot.THREE))(m(reboot.CAR)(reboot.ONE)(reboot.THREE))(m(reboot.CDR))))
@@ -56,14 +72,26 @@ export let StVM = reboot.Y(withDriver => driver => reboot.Y(withObjects => objec
         (then => poolp(nvm => then(nvm))(poolp(withCurrentVector)(currentVector(reboot.ADD1(reboot.THREE))(FALSE)(x => x))))
         (reboot.COND(reboot.EQ(f)(reboot.ADD1(reboot.THREE)))
         (nf => driver(reboot.ZERO)(nf)(self))
-        ()))))
-        )(FALSE))))))
+        (reboot.FALSE)))))
+        )(reboot.FALSE))))))
     ))))
-export let StToHandler = car => cdr => vm => vect => st_vector => StVector(StObject(FALSE)(FALSE))(reboot.REDUCE(acc => x => (c => reboot.CONS(c(x => acc(reboot.CAR))(acc(reboot.CAR)(reboot.ZERO)(FALSE)))(reboot.Y(res => v => c(y => CONS(x)(acc(reboot.CDR)))(y => CONS(acc(reboot.CAR)(reboot.ZERO)(FALSE)(reboot.ADD(reboot.THREE)(reboot.THREE))(FALSE))(acc(reboot.CDR) ))(st_vector))(cdr)))(reboot.COND(reboot.EQ(x(reboot.CAR)(x => x))(reboot.SUB(reboot.MULTIPLY(reboot.MULTIPLY(reboot.THREE)(reboot.TWO))(reboot.ADD(reboot.THREE)(reboot.TWO)))(reboot.TWO))))))(reboot.ONE)
-
+export let StToHandler = car => cdr => vm => vect => st_vector => StVector(StObject(FALSE)(FALSE))(reboot.REDUCE(acc => x => (c => reboot.CONS(c(x => acc(reboot.CAR))(acc(reboot.CAR)(reboot.ZERO)(FALSE)))(reboot.Y(res => v => c(y => CONS(x)(acc(reboot.CDR)))(y => CONS(acc(reboot.CAR)(reboot.ZERO)(FALSE)(reboot.ADD(reboot.THREE)(reboot.THREE))(FALSE))(acc(reboot.CDR) ))(st_vector))(cdr)))(
+    reboot.COND(reboot.EQ(x(reboot.CAR)(x => x)))
+    (reboot.SUB(reboot.MULTIPLY(reboot.MULTIPLY(reboot.THREE)(reboot.TWO))(reboot.ADD(reboot.THREE)(reboot.TWO)))(reboot.TWO))
+    (reboot.FALSE)
+)))(reboot.ONE)
+/*drivers*/
 export let StExternal = car => cdr => vm => vect => poolp(external => external(vm)(vect)(R.construct(Promise))(m => o => k => reboot.COND(reboot.EQ(n)(reboot.ZERO))(o[k])(reboot.COND(reboot.EQ(n)(reboot.ONE))(v => Object.assign(Object.create(o.__proto__),o,{[k]: v}))(reboot.FALSE))))
+let StuiWMHook = f => (React,lib,{desktop, windowManager}) => f(React,lib,{desktop})(windowManager)
+export let Stui = new Proxy({apply: (o,t,args) => {let [type] = args;return StuiWMHook((React,lib,{desktop}) => wm => {return code => setVM => reboot.Y(withVM => vm => {})})},langs: new Proxy({en: {apply: v => v}},{get: (o,k) => new Proxy(o[k],{apply: (o,t,args) => (o.apply || (v => o[v]))(args[0])})})},{apply: (o,t,args) => o.apply(o,t,args)});
 
-export let StCodeHandler = car => cdr => vm => vect => (codes => reboot.AT(reboot.MAP(rpoolp)(codes))(reboot.AT(vect(reboot.ZERO)(reboot.ADD1(reboot.THREE))(reboot.ONE)))(cdr(reboot.CDR)(reboot.CAR))(cdr(reboot.CDR)(reboot.CDR))(vm)(vect(reboot.ZERO)))(reboot.CONS(StToHandler)(reboot.CONS(StExternal)(FALSE)))
+export let StAltVM = car => cdr => vm => vect => code => (o => {o['host'] = code; o['reboot'] = new Proxy(reboot,{set: (o,k,v) => {}});return o})(vm['alt'](vect)(code))
+/*not  drivers*/
+export let StCodeHandler = reboot.Y(h => car => cdr => vm => reboot.Y(withVect => vect => (codes => reboot.AT(reboot.MAP(rpoolp)(codes))(
+    reboot.AT(vect(reboot.ZERO)(reboot.ADD1(reboot.THREE))(reboot.ONE)))(cdr(reboot.CDR)(reboot.CAR))(cdr(reboot.CDR)(reboot.CDR))(vm)(vect(reboot.ZERO)))(reboot.CONS(StToHandler)(reboot.CONS(StExternal)(reboot.CONS(car => cdr => vm => _ => reboot.Y(self => StObject(FALSE)(reboot.CONS(f => (v => h(
+        v(reboot.ADD(reboot.THREE)(reboot.THREE))(reboot.CAR))(v(reboot.ADD(reboot.THREE)(reboot.THREE))(reboot.CDR))(vm)(v))(f(vect)))(reboot.CONS(code => vect => 
+        code(vect(reboot.ADD(reboot.THREE)(reboot.THREE))(reboot.CAR))(vect(reboot.ADD(reboot.THREE)(reboot.THREE))(reboot.CDR))(vm)(vect)
+        )(reboot.FALSE)))))(reboot.CONS(car => cdr => vm => vect => StAltVM(car)(cdr)(vm)(vect)(h))(reboot.FALSE))))))) 
 
 export let StCPU = reboot.Y(withVM => vm => reboot.Y(self => f => 
     reboot.COND(reboot.EQ(f)(reboot.ZERO))
