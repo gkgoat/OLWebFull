@@ -13,3 +13,12 @@
 [submodule "src/vx/jemul8"]
 	path = src/vx/jemul8
 	url = https://github.com/asmblah/jemul8.git
+[submodule "src/collide"]
+	path = src/collide
+	url = https://github.com/SmalltalkLand/collide.git
+[submodule "src/browsix"]
+	path = src/browsix
+	url = https://github.com/plasma-umass/browsix.git
+[submodule "src/SmallMock"]
+	path = src/SmallMock
+	url = https://github.com/SmalltalkLand/SmallMock.git
